@@ -1,0 +1,1581 @@
+{
+  "files": [
+    {
+      "file": "css-shared/src/common.css",
+      "scope": "shared"
+    },
+    {
+      "file": "css-shared/src/shell.css",
+      "scope": "shared"
+    },
+    {
+      "file": "geo/src/geo.css",
+      "scope": "local"
+    },
+    {
+      "file": "soc/src/soc.css",
+      "scope": "local"
+    },
+    {
+      "file": "wgss/src/wgss.css",
+      "scope": "local"
+    },
+    {
+      "file": "style-guide/src/style-guide.css",
+      "scope": "guide"
+    }
+  ],
+  "tokens": [
+    {
+      "token": "--uh-green",
+      "literal": "#024731",
+      "file": "css-shared/src/common.css",
+      "line": 5
+    },
+    {
+      "token": "--color-teal",
+      "literal": "#27665d",
+      "file": "css-shared/src/common.css",
+      "line": 6
+    },
+    {
+      "token": "--color-blue",
+      "literal": "#354d67",
+      "file": "css-shared/src/common.css",
+      "line": 7
+    },
+    {
+      "token": "--color-purple",
+      "literal": "#655b7a",
+      "file": "css-shared/src/common.css",
+      "line": 8
+    },
+    {
+      "token": "--color-bronze",
+      "literal": "#755322",
+      "file": "css-shared/src/common.css",
+      "line": 9
+    },
+    {
+      "token": "--text",
+      "literal": "#222222",
+      "file": "css-shared/src/common.css",
+      "line": 10
+    },
+    {
+      "token": "--light",
+      "literal": "#ffffff",
+      "file": "css-shared/src/common.css",
+      "line": 11
+    },
+    {
+      "token": "--light-gray",
+      "literal": "#f7f7f7",
+      "file": "css-shared/src/common.css",
+      "line": 12
+    },
+    {
+      "token": "--dark-gray",
+      "literal": "#2d2d2d",
+      "file": "css-shared/src/common.css",
+      "line": 13
+    },
+    {
+      "token": "--border-gray",
+      "literal": "#d2d2d2",
+      "file": "css-shared/src/common.css",
+      "line": 14
+    },
+    {
+      "token": "--icon-gray",
+      "literal": "#888888",
+      "file": "css-shared/src/common.css",
+      "line": 15
+    },
+    {
+      "token": "--nav-divider",
+      "literal": "#e2e2e2",
+      "file": "css-shared/src/common.css",
+      "line": 16
+    },
+    {
+      "token": "--frame-border",
+      "literal": "#e2e2e2",
+      "file": "css-shared/src/common.css",
+      "line": 19
+    },
+    {
+      "token": "--frame-shadow",
+      "literal": "rgba(0, 0, 0, 0.08)",
+      "file": "css-shared/src/common.css",
+      "line": 21
+    },
+    {
+      "token": "--tile-pattern-filter",
+      "literal": "#fff",
+      "file": "css-shared/src/common.css",
+      "line": 48
+    },
+    {
+      "token": "--tile-pattern-filter",
+      "literal": "#fff",
+      "file": "css-shared/src/common.css",
+      "line": 48
+    },
+    {
+      "token": "--color-gold",
+      "literal": "#b58a24",
+      "file": "css-shared/src/common.css",
+      "line": 50
+    },
+    {
+      "token": "--color-brown",
+      "literal": "#835044",
+      "file": "css-shared/src/common.css",
+      "line": 51
+    },
+    {
+      "token": "--color-pink",
+      "literal": "#943c70",
+      "file": "css-shared/src/common.css",
+      "line": 52
+    },
+    {
+      "token": "--color-black",
+      "literal": "#222222",
+      "file": "css-shared/src/common.css",
+      "line": 53
+    },
+    {
+      "token": "--link-color",
+      "literal": "#0a58ca",
+      "file": "css-shared/src/common.css",
+      "line": 54
+    },
+    {
+      "token": "--note-color",
+      "literal": "#555555",
+      "file": "css-shared/src/common.css",
+      "line": 55
+    },
+    {
+      "token": "--accent-color",
+      "literal": "#b35c00",
+      "file": "css-shared/src/common.css",
+      "line": 56
+    },
+    {
+      "token": "--surface-green",
+      "literal": "#edf5f0",
+      "file": "css-shared/src/common.css",
+      "line": 78
+    },
+    {
+      "token": "--surface-blue",
+      "literal": "#eef9fc",
+      "file": "css-shared/src/common.css",
+      "line": 79
+    },
+    {
+      "token": "--surface-gold",
+      "literal": "#fff8e6",
+      "file": "css-shared/src/common.css",
+      "line": 80
+    },
+    {
+      "token": "--surface-bronze",
+      "literal": "#faf7f0",
+      "file": "css-shared/src/common.css",
+      "line": 81
+    },
+    {
+      "token": "--surface-purple",
+      "literal": "#f6f4f8",
+      "file": "css-shared/src/common.css",
+      "line": 82
+    },
+    {
+      "token": "--surface-brown",
+      "literal": "#faf2ee",
+      "file": "css-shared/src/common.css",
+      "line": 83
+    },
+    {
+      "token": "--surface-pink",
+      "literal": "#fcf1f7",
+      "file": "css-shared/src/common.css",
+      "line": 84
+    },
+    {
+      "token": "--news-media-background",
+      "literal": "#eef4f8",
+      "file": "css-shared/src/common.css",
+      "line": 664
+    },
+    {
+      "token": "--divider-color",
+      "literal": "#fff",
+      "file": "css-shared/src/common.css",
+      "line": 1628
+    },
+    {
+      "token": "--tile-text",
+      "literal": "#222",
+      "file": "css-shared/src/common.css",
+      "line": 1779
+    },
+    {
+      "token": "--mini-callout-color",
+      "literal": "#d47a13",
+      "file": "css-shared/src/common.css",
+      "line": 1937
+    },
+    {
+      "token": "--sg-border",
+      "literal": "#dbe2e8",
+      "file": "style-guide/src/style-guide.css",
+      "line": 5
+    },
+    {
+      "token": "--sg-surface",
+      "literal": "#f5f7fa",
+      "file": "style-guide/src/style-guide.css",
+      "line": 6
+    }
+  ],
+  "colors": [
+    {
+      "literal": "#000",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 273,
+          "selector": ".page-hero--layered",
+          "property": "background",
+          "value": "var(--hero-base-color, #000)",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#024731",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 5,
+          "selector": ":root",
+          "property": "--uh-green",
+          "value": "#024731",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#0a58ca",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 54,
+          "selector": ":root",
+          "property": "--link-color",
+          "value": "#0a58ca",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#1c78bd",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 243,
+          "selector": ":focus-visible",
+          "property": "outline",
+          "value": "3px solid #1c78bd",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#222",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1521,
+          "selector": ".unit-home a:focus-visible",
+          "property": "outline",
+          "value": "3px solid #222",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1533,
+          "selector": ".home-video",
+          "property": "background",
+          "value": "#222",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1779,
+          "selector": ".tile-gold",
+          "property": "--tile-text",
+          "value": "#222",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#222222",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 10,
+          "selector": ":root",
+          "property": "--text",
+          "value": "#222222",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 53,
+          "selector": ":root",
+          "property": "--color-black",
+          "value": "#222222",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#244c73",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 380,
+          "selector": ".hero-attribution a",
+          "property": "color",
+          "value": "#244c73",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#253548",
+      "usages": [
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 70,
+          "selector": ".sg-code pre, .sg-preview-code",
+          "property": "color",
+          "value": "#253548",
+          "scope": "guide"
+        }
+      ]
+    },
+    {
+      "literal": "#27665d",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 6,
+          "selector": ":root",
+          "property": "--color-teal",
+          "value": "#27665d",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#2d2d2d",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 13,
+          "selector": ":root",
+          "property": "--dark-gray",
+          "value": "#2d2d2d",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#354d67",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 7,
+          "selector": ":root",
+          "property": "--color-blue",
+          "value": "#354d67",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 295,
+          "selector": ".page-hero-overlay",
+          "property": "background",
+          "value": "var(--hero-overlay-color, #354d67)",
+          "scope": "shared"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 80,
+          "selector": ".sg-copy",
+          "property": "border",
+          "value": "1px solid #354d67",
+          "scope": "guide"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 83,
+          "selector": ".sg-copy",
+          "property": "color",
+          "value": "#354d67",
+          "scope": "guide"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 129,
+          "selector": ".sg-dark",
+          "property": "background",
+          "value": "#354d67",
+          "scope": "guide"
+        }
+      ]
+    },
+    {
+      "literal": "#555",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 366,
+          "selector": ".hero-attribution",
+          "property": "color",
+          "value": "#555",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 697,
+          "selector": ".news-post-date",
+          "property": "color",
+          "value": "#555",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 791,
+          "selector": ".site-main .news-link-preview-domain,\n.site-main .news-repost-label",
+          "property": "color",
+          "value": "#555",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 871,
+          "selector": ".student-meta",
+          "property": "color",
+          "value": "var(--bs-secondary-color, #555)",
+          "scope": "shared"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 184,
+          "selector": ".sg-label",
+          "property": "color",
+          "value": "#555",
+          "scope": "guide"
+        }
+      ]
+    },
+    {
+      "literal": "#555555",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 55,
+          "selector": ":root",
+          "property": "--note-color",
+          "value": "#555555",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#655b7a",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 8,
+          "selector": ":root",
+          "property": "--color-purple",
+          "value": "#655b7a",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#6c757d",
+      "usages": [
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 186,
+          "selector": ".unit-icon-button",
+          "property": "border",
+          "value": "1px solid #6c757d",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#755322",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 9,
+          "selector": ":root",
+          "property": "--color-bronze",
+          "value": "#755322",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#777",
+      "usages": [
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 294,
+          "selector": ".unit-nav .nav-menu-icon",
+          "property": "color",
+          "value": "#777",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#835044",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 51,
+          "selector": ":root",
+          "property": "--color-brown",
+          "value": "#835044",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#888888",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 15,
+          "selector": ":root",
+          "property": "--icon-gray",
+          "value": "#888888",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#943c70",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 52,
+          "selector": ":root",
+          "property": "--color-pink",
+          "value": "#943c70",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#a0afbf",
+      "usages": [
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 120,
+          "selector": ".sg-rule-demo",
+          "property": "border-inline",
+          "value": "1px dashed #a0afbf",
+          "scope": "guide"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 125,
+          "selector": ".sg-space-demo",
+          "property": "border-block",
+          "value": "1px dashed #a0afbf",
+          "scope": "guide"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 136,
+          "selector": ".sg-grid-cell",
+          "property": "border",
+          "value": "1px dashed #a0afbf",
+          "scope": "guide"
+        }
+      ]
+    },
+    {
+      "literal": "#b35c00",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 56,
+          "selector": ":root",
+          "property": "--accent-color",
+          "value": "#b35c00",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#b58a24",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 50,
+          "selector": ":root",
+          "property": "--color-gold",
+          "value": "#b58a24",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#b5b5b5",
+      "usages": [
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 25,
+          "selector": ".sticky-header",
+          "property": "border-bottom",
+          "value": "1px solid #b5b5b5",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#cbd5df",
+      "usages": [
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 19,
+          "selector": ".sg-index a",
+          "property": "border",
+          "value": "1px solid #cbd5df",
+          "scope": "guide"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 200,
+          "selector": ".sg-asset-panel",
+          "property": "border",
+          "value": "1px solid #cbd5df",
+          "scope": "guide"
+        }
+      ]
+    },
+    {
+      "literal": "#d2d2d2",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 14,
+          "selector": ":root",
+          "property": "--border-gray",
+          "value": "#d2d2d2",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#d47a13",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1937,
+          "selector": ".mini-callout-gold",
+          "property": "--mini-callout-color",
+          "value": "#d47a13",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#d7e4dc",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 678,
+          "selector": ".news-post-header",
+          "property": "border-bottom",
+          "value": "1px solid #d7e4dc",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 797,
+          "selector": ".site-main .news-repost-label",
+          "property": "border-bottom",
+          "value": "1px solid #d7e4dc",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#dbe2e8",
+      "usages": [
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 5,
+          "selector": ".sg-reference, .sg-shell-reference",
+          "property": "--sg-border",
+          "value": "#dbe2e8",
+          "scope": "guide"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 218,
+          "selector": ".sg-directory-card",
+          "property": "border",
+          "value": "1px solid #dbe2e8",
+          "scope": "guide"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 229,
+          "selector": ".sg-related",
+          "property": "border-top",
+          "value": "1px solid #dbe2e8",
+          "scope": "guide"
+        }
+      ]
+    },
+    {
+      "literal": "#e2e2e2",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 16,
+          "selector": ":root",
+          "property": "--nav-divider",
+          "value": "#e2e2e2",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 19,
+          "selector": ":root",
+          "property": "--frame-border",
+          "value": "1px solid #e2e2e2",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#edf2f7",
+      "usages": [
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 124,
+          "selector": ".sg-space-demo",
+          "property": "background",
+          "value": "#edf2f7",
+          "scope": "guide"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 135,
+          "selector": ".sg-grid-cell",
+          "property": "background",
+          "value": "#edf2f7",
+          "scope": "guide"
+        }
+      ]
+    },
+    {
+      "literal": "#edf5f0",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 78,
+          "selector": ":root",
+          "property": "--surface-green",
+          "value": "#edf5f0",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 677,
+          "selector": ".news-post-header",
+          "property": "background",
+          "value": "#edf5f0",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 796,
+          "selector": ".site-main .news-repost-label",
+          "property": "background",
+          "value": "#edf5f0",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#eef4f8",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 664,
+          "selector": ".news-post",
+          "property": "--news-media-background",
+          "value": "#eef4f8",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#eef9fc",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 79,
+          "selector": ":root",
+          "property": "--surface-blue",
+          "value": "#eef9fc",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#f2f2f2",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 364,
+          "selector": ".hero-attribution",
+          "property": "background",
+          "value": "#f2f2f2",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 826,
+          "selector": ".site-main .news-post-footer",
+          "property": "background",
+          "value": "#f2f2f2",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#f3f5f8",
+      "usages": [
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 69,
+          "selector": ".sg-code pre, .sg-preview-code",
+          "property": "background",
+          "value": "#f3f5f8",
+          "scope": "guide"
+        }
+      ]
+    },
+    {
+      "literal": "#f5f7fa",
+      "usages": [
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 6,
+          "selector": ".sg-reference, .sg-shell-reference",
+          "property": "--sg-surface",
+          "value": "#f5f7fa",
+          "scope": "guide"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 220,
+          "selector": ".sg-directory-card",
+          "property": "background",
+          "value": "#f5f7fa",
+          "scope": "guide"
+        }
+      ]
+    },
+    {
+      "literal": "#f6f4f8",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 82,
+          "selector": ":root",
+          "property": "--surface-purple",
+          "value": "#f6f4f8",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#f7f7f7",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 12,
+          "selector": ":root",
+          "property": "--light-gray",
+          "value": "#f7f7f7",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#faf2ee",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 83,
+          "selector": ":root",
+          "property": "--surface-brown",
+          "value": "#faf2ee",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#faf7f0",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 81,
+          "selector": ":root",
+          "property": "--surface-bronze",
+          "value": "#faf7f0",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#fafbfd",
+      "usages": [
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 121,
+          "selector": ".sg-rule-demo",
+          "property": "background",
+          "value": "#fafbfd",
+          "scope": "guide"
+        }
+      ]
+    },
+    {
+      "literal": "#fcf1f7",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 84,
+          "selector": ":root",
+          "property": "--surface-pink",
+          "value": "#fcf1f7",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#fff",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 48,
+          "selector": ":root",
+          "property": "--tile-pattern-filter",
+          "value": "invert(1) drop-shadow(.4px 0 0 #fff) drop-shadow(-.4px 0 0 #fff)",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 48,
+          "selector": ":root",
+          "property": "--tile-pattern-filter",
+          "value": "invert(1) drop-shadow(.4px 0 0 #fff) drop-shadow(-.4px 0 0 #fff)",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 307,
+          "selector": ".page-hero",
+          "property": "box-shadow",
+          "value": "0 9px 0 #fff, 0 14px 0 var(--border-gray)",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 340,
+          "selector": ".page-hero--layered .hero-location",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 435,
+          "selector": ".photo-frame",
+          "property": "background-color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 667,
+          "selector": ".news-post",
+          "property": "background",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1628,
+          "selector": ".divider-white",
+          "property": "--divider-color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1768,
+          "selector": ".tile",
+          "property": "color",
+          "value": "var(--tile-text, #fff)",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1816,
+          "selector": ".site-main a.program-tile,\n.site-main a.program-tile:hover,\n.site-main a.program-tile:focus-visible",
+          "property": "color",
+          "value": "var(--tile-text, #fff)",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1864,
+          "selector": ".button",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1881,
+          "selector": ".button-outline",
+          "property": "background",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1890,
+          "selector": ".button:hover,\n.button:focus-visible",
+          "property": "background",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1899,
+          "selector": ".button-outline:hover,\n.button-outline:focus-visible,\n.button-soft:hover,\n.button-soft:focus-visible",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 9,
+          "selector": ".skip-link",
+          "property": "background",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 31,
+          "selector": ".uh-brand",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 58,
+          "selector": ".uh-brand .nav-link",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 71,
+          "selector": ".uh-brand .nav-link:hover,\n.uh-brand .nav-link:focus-visible",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 281,
+          "selector": ".unit-nav .dropdown-item:hover,\n.unit-nav .dropdown-item:focus,\n.unit-nav .dropdown-item:active",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 287,
+          "selector": ".unit-nav .dropdown-item:hover .nav-menu-icon,\n.unit-nav .dropdown-item:focus .nav-menu-icon,\n.unit-nav .dropdown-item:active .nav-menu-icon",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 385,
+          "selector": ".site-footer",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 415,
+          "selector": ".site-footer a",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 421,
+          "selector": ".site-footer a:hover,\n.site-footer a:focus-visible",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 624,
+          "selector": ".footer-language-band",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 635,
+          "selector": ".site-footer .footer-language-heading-bar p",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 673,
+          "selector": ".site-footer .footer-languages a",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 680,
+          "selector": ".site-footer .footer-languages a:hover,\n.site-footer .footer-languages a:focus-visible",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 726,
+          "selector": ".subfooter p",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 732,
+          "selector": ".subfooter a",
+          "property": "color",
+          "value": "#fff",
+          "scope": "shared"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 22,
+          "selector": ".sg-index a",
+          "property": "background",
+          "value": "#fff",
+          "scope": "guide"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 82,
+          "selector": ".sg-copy",
+          "property": "background",
+          "value": "#fff",
+          "scope": "guide"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 130,
+          "selector": ".sg-dark",
+          "property": "color",
+          "value": "#fff",
+          "scope": "guide"
+        }
+      ]
+    },
+    {
+      "literal": "#fff8e6",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 80,
+          "selector": ":root",
+          "property": "--surface-gold",
+          "value": "#fff8e6",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "#ffffff",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 11,
+          "selector": ":root",
+          "property": "--light",
+          "value": "#ffffff",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "currentcolor",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 979,
+          "selector": ".profile-contact-link svg",
+          "property": "fill",
+          "value": "currentColor",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1124,
+          "selector": ".degree-tile-icon svg",
+          "property": "fill",
+          "value": "currentColor",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1185,
+          "selector": ".funding-deadline-icon svg",
+          "property": "fill",
+          "value": "currentColor",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1232,
+          "selector": ".date-tile-icon",
+          "property": "stroke",
+          "value": "currentColor",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1492,
+          "selector": ".program-tile-icon svg",
+          "property": "fill",
+          "value": "currentColor",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1793,
+          "selector": ".icon-tile svg",
+          "property": "fill",
+          "value": "currentColor",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/common.css",
+          "line": 1911,
+          "selector": ".button > svg,\n.button-icon,\n.button-icon svg",
+          "property": "fill",
+          "value": "currentColor",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 196,
+          "selector": ".unit-icon-button svg,\n.desktop-search-submit svg",
+          "property": "fill",
+          "value": "currentColor",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 306,
+          "selector": ".unit-nav .dropdown-toggle::after",
+          "property": "border-right",
+          "value": "2px solid currentColor",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 307,
+          "selector": ".unit-nav .dropdown-toggle::after",
+          "property": "border-bottom",
+          "value": "2px solid currentColor",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 562,
+          "selector": ".footer-department-webmaster svg",
+          "property": "fill",
+          "value": "currentColor",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 568,
+          "selector": ".site-footer .footer-department-privacy a:focus-visible,\n.site-footer .footer-department-webmaster a:focus-visible,\n.site-footer .footer-department-support a:focus-visible",
+          "property": "outline",
+          "value": "2px solid currentColor",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 615,
+          "selector": ".footer-contact-link svg",
+          "property": "fill",
+          "value": "currentColor",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 685,
+          "selector": ".site-footer .footer-languages a:focus-visible",
+          "property": "outline",
+          "value": "2px solid currentColor",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 774,
+          "selector": ".nav-main-icon svg,\n.nav-menu-icon-wrap svg",
+          "property": "fill",
+          "value": "currentColor",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "rgb(0 0 0 / 10%)",
+      "usages": [
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 629,
+          "selector": ".footer-language-heading-bar",
+          "property": "background",
+          "value": "rgb(0 0 0 / 10%)",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "rgb(0 0 0 / 15%)",
+      "usages": [
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 623,
+          "selector": ".footer-language-band",
+          "property": "background",
+          "value": "rgb(0 0 0 / 15%)",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "rgba(0, 0, 0, 0.08)",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 21,
+          "selector": ":root",
+          "property": "--frame-shadow",
+          "value": "0 3px 10px rgba(0, 0, 0, 0.08)",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "rgba(0, 0, 0, 0.12)",
+      "usages": [
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 26,
+          "selector": ".sticky-header",
+          "property": "box-shadow",
+          "value": "0 5px 12px rgba(0, 0, 0, 0.12)",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 329,
+          "selector": ".unit-nav .dropdown:hover",
+          "property": "filter",
+          "value": "drop-shadow(3px 4px 6px rgba(0, 0, 0, 0.12))",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "rgba(0, 0, 0, 0.28)",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 256,
+          "selector": ".page-hero",
+          "property": "box-shadow",
+          "value": "inset 0 10px 15px -10px rgba(0, 0, 0, 0.28)",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "rgba(0, 0, 0, var(--hero-location-bg-opacity))",
+      "usages": [
+        {
+          "file": "css-shared/src/common.css",
+          "line": 339,
+          "selector": ".page-hero--layered .hero-location",
+          "property": "background",
+          "value": "rgba(0, 0, 0, var(--hero-location-bg-opacity))",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "rgba(255, 255, 255, 0.4)",
+      "usages": [
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 489,
+          "selector": ".footer-grid::after",
+          "property": "border-top",
+          "value": "1px solid rgba(255, 255, 255, 0.4)",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 504,
+          "selector": ".footer-grid::after",
+          "property": "border-top",
+          "value": "1px solid rgba(255, 255, 255, 0.4)",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "rgba(255, 255, 255, 0.5)",
+      "usages": [
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 76,
+          "selector": ".uh-brand .navbar-toggler",
+          "property": "border-color",
+          "value": "rgba(255, 255, 255, 0.5)",
+          "scope": "shared"
+        }
+      ]
+    },
+    {
+      "literal": "transparent",
+      "usages": [
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 188,
+          "selector": ".unit-icon-button",
+          "property": "background",
+          "value": "transparent",
+          "scope": "shared"
+        },
+        {
+          "file": "css-shared/src/shell.css",
+          "line": 260,
+          "selector": ".unit-nav .nav-trigger",
+          "property": "background",
+          "value": "transparent",
+          "scope": "shared"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 300,
+          "selector": ".sg-audit-chip",
+          "property": "background-image",
+          "value": "linear-gradient(45deg,var(--nav-divider) 25%,transparent 25%),linear-gradient(-45deg,var(--nav-divider) 25%,transparent 25%),linear-gradient(45deg,transparent 75%,var(--nav-divider) 75%),linear-gradient(-45deg,transparent 75%,var(--nav-divider) 75%)",
+          "scope": "guide"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 300,
+          "selector": ".sg-audit-chip",
+          "property": "background-image",
+          "value": "linear-gradient(45deg,var(--nav-divider) 25%,transparent 25%),linear-gradient(-45deg,var(--nav-divider) 25%,transparent 25%),linear-gradient(45deg,transparent 75%,var(--nav-divider) 75%),linear-gradient(-45deg,transparent 75%,var(--nav-divider) 75%)",
+          "scope": "guide"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 300,
+          "selector": ".sg-audit-chip",
+          "property": "background-image",
+          "value": "linear-gradient(45deg,var(--nav-divider) 25%,transparent 25%),linear-gradient(-45deg,var(--nav-divider) 25%,transparent 25%),linear-gradient(45deg,transparent 75%,var(--nav-divider) 75%),linear-gradient(-45deg,transparent 75%,var(--nav-divider) 75%)",
+          "scope": "guide"
+        },
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 300,
+          "selector": ".sg-audit-chip",
+          "property": "background-image",
+          "value": "linear-gradient(45deg,var(--nav-divider) 25%,transparent 25%),linear-gradient(-45deg,var(--nav-divider) 25%,transparent 25%),linear-gradient(45deg,transparent 75%,var(--nav-divider) 75%),linear-gradient(-45deg,transparent 75%,var(--nav-divider) 75%)",
+          "scope": "guide"
+        }
+      ]
+    },
+    {
+      "literal": "white",
+      "usages": [
+        {
+          "file": "style-guide/src/style-guide.css",
+          "line": 160,
+          "selector": ".sg-typography-frame",
+          "property": "background",
+          "value": "white",
+          "scope": "guide"
+        }
+      ]
+    }
+  ]
+}
