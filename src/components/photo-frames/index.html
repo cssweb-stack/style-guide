@@ -36,14 +36,14 @@ description: "Photo Frames examples and usage guidance for College of Social Sci
 <article class="sg-entry" id="academic-photos">
 <div class="sg-entry-meta">
 <h3>Academic photo rows</h3>
-<p><code>.academic-photo-row</code> and <code>.academic-photo-frame</code> pair a teal photo mat with text. The outer frame aligns with the row’s left edge.</p>
-<p>Shared controls in <code>css-shared/src/common.css</code>: <code>--academic-photo-frame-padding</code> starts at 9px (set to <code>0</code> for no mat); <code>--academic-photo-row-space-after</code> starts at 2.25rem and controls every row’s bottom gap, including the final row.</p>
+<p><code>.academic-photo-row</code> and <code>.academic-photo-frame</code> pair a pinline photo frame with text. The outer frame aligns with the row’s left edge.</p>
+<p>Academic frames have no padding, background, or shadow. In <code>css-shared/src/common.css</code>, <code>--academic-photo-row-space-after</code> starts at 2.25rem and controls each row’s bottom gap, including the final row, and the bottom margin of paragraphs immediately introducing rows.</p>
 <p><code>--academic-photo-row-dividers</code> is <code>none</code> by default. Set it to <code>block</code> to enable lines for all academic photo rows. Add <code>data-divider</code> to an individual row to show its line. Dividers sit within the existing gap and add no spacing.</p>
 </div>
 <div class="sg-specimen">
 <section class="media-row media-row-large academic-photo-row" aria-labelledby="academic-photo-default">
 <img class="photo-frame academic-photo-frame media-visual" src="{{ '/_media/examples/sample-photo.svg' | url }}" alt="Sample academic photo illustration" width="400" height="400" loading="lazy">
-<div class="media-content"><h4 id="academic-photo-default">Academic photo frame</h4><p>Default teal mat and bottom-only spacing. There is no divider after this row.</p></div>
+<div class="media-content"><h4 id="academic-photo-default">Academic photo frame</h4><p>Pinline frame and bottom-only spacing. There is no divider after this row.</p></div>
 </section>
 <section class="media-row media-row-large academic-photo-row" data-divider aria-labelledby="academic-photo-divider">
 <img class="photo-frame academic-photo-frame media-visual" src="{{ '/_media/examples/sample-photo.svg' | url }}" alt="Sample academic photo illustration" width="400" height="400" loading="lazy">
