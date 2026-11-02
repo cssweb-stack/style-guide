@@ -64,7 +64,7 @@ border-top: 1px solid var(--sg-border);
 .sg-entry summary {
 padding: .75rem 1.25rem;
 min-height: 44px;
-font-weight: 600;
+font-weight: var(--font-weight-semibold);
 cursor: pointer;
 }
 .sg-code {
@@ -274,7 +274,7 @@ border-radius: .375rem;
 .sg-audit-details > summary {
 min-height: 44px;
 padding: .875rem 1rem;
-font-weight: 600;
+font-weight: var(--font-weight-semibold);
 cursor: pointer;
 }
 .sg-audit-content {
