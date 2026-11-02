@@ -1,6 +1,6 @@
 (() => {
 const ready = () => {
-const oldSections = {"palette": "/colors/", "typography": "/typography/headings/", "lists": "/typography/lists/", "media-rows": "/layout/media-rows/", "grids": "/layout/grids/", "dividers": "/layout/dividers-and-spacing/", "buttons": "/components/buttons/", "callouts": "/components/callouts/", "tiles": "/components/tiles/", "frames": "/components/photo-frames/", "profiles": "/components/faculty-profiles/", "advising": "/components/advising/", "icons": "/components/icons/", "bluesky": "/components/bluesky/", "graphics": "/shell/graphics/", "ownership": "/reference/where-to-edit/"};
+const oldSections = {"palette": "/colors/", "typography": "/typography/", "lists": "/typography/", "media-rows": "/layout/media-rows/", "grids": "/layout/grids/", "dividers": "/layout/dividers-and-spacing/", "buttons": "/components/buttons/", "callouts": "/components/callouts/", "tiles": "/components/tiles/", "frames": "/components/photo-frames/", "profiles": "/components/faculty-profiles/", "advising": "/components/advising/", "icons": "/components/icons/", "bluesky": "/components/bluesky/", "graphics": "/shell/graphics/", "ownership": "/reference/where-to-edit/"};
 const oldHash = window.location.hash.slice(1);
 if (document.querySelector('[data-guide-home]') && oldSections[oldHash]) {
 const home = document.querySelector('[data-guide-home]').href;

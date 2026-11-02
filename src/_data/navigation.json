@@ -9,20 +9,7 @@
   },
   {
     "label": "Typography",
-    "children": [
-      {
-        "label": "Headings and Introductions",
-        "url": "/typography/headings/"
-      },
-      {
-        "label": "Body Text and Links",
-        "url": "/typography/body-text/"
-      },
-      {
-        "label": "Lists",
-        "url": "/typography/lists/"
-      }
-    ]
+    "url": "/typography/"
   },
   {
     "label": "Layout",
