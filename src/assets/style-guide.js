@@ -1,5 +1,13 @@
 (() => {
 const ready = () => {
+const oldSections = {"palette": "/colors/", "typography": "/typography/headings/", "lists": "/typography/lists/", "media-rows": "/layout/media-rows/", "grids": "/layout/grids/", "dividers": "/layout/dividers-and-spacing/", "buttons": "/components/buttons/", "callouts": "/components/callouts/", "tiles": "/components/tiles/", "frames": "/components/photo-frames/", "profiles": "/components/faculty-profiles/", "advising": "/components/advising/", "icons": "/components/icons/", "bluesky": "/components/bluesky/", "graphics": "/shell/graphics/", "ownership": "/reference/where-to-edit/"};
+const oldHash = window.location.hash.slice(1);
+if (document.querySelector('[data-guide-home]') && oldSections[oldHash]) {
+const home = document.querySelector('[data-guide-home]').href;
+window.location.replace(home + oldSections[oldHash].replace(/^\//, '') + '#' + oldHash);
+return;
+}
+
 for (const button of document.querySelectorAll('[data-copy-code]')) {
 button.addEventListener('click', async () => {
 const code = button.closest('.sg-code').querySelector('code').textContent;
@@ -36,37 +44,19 @@ for (const node of document.querySelectorAll('[data-token]')) {
 const value = getComputedStyle(document.documentElement).getPropertyValue(node.dataset.token).trim();
 if (value) node.textContent = value;
 }
-const frame = document.querySelector('[data-type-frame]');
-const slider = document.querySelector('[data-preview-size]');
-if (!frame || !slider) return;
-const output = document.querySelector('[data-preview-value]');
-const previewCode = document.querySelector('[data-preview-code]');
-const reset = document.querySelector('[data-preview-reset]');
-let initialSize = 32;
-const initialize = () => {
-const heading = frame.contentDocument?.querySelector('h1');
-if (!heading) return;
-initialSize = Math.round(parseFloat(frame.contentWindow.getComputedStyle(heading).fontSize));
-slider.value = String(initialSize);
-output.value = initialSize + 'px';
+for (const frame of document.querySelectorAll('[data-type-frame]')) {
+const resize = () => {
+const body = frame.contentDocument?.body;
+if (body) frame.style.height = Math.ceil(body.getBoundingClientRect().height) + 2 + 'px';
 };
-frame.addEventListener('load', initialize);
-if (frame.contentDocument?.readyState === 'complete') initialize();
-slider.addEventListener('input', () => {
-const heading = frame.contentDocument?.querySelector('h1');
-if (!heading) return;
-heading.style.fontSize = slider.value + 'px';
-output.value = slider.value + 'px';
-previewCode.textContent = ':root {\n--heading-1-size: ' + slider.value + 'px;\n}';
+frame.addEventListener('load', () => {
+resize();
+const body = frame.contentDocument?.body;
+if (body && typeof ResizeObserver !== 'undefined') new ResizeObserver(resize).observe(body);
 });
-reset.addEventListener('click', () => {
-const heading = frame.contentDocument?.querySelector('h1');
-if (heading) heading.style.removeProperty('font-size');
-slider.value = String(initialSize);
-output.value = initialSize + 'px';
-previewCode.textContent = 'No preview override applied.';
-});
+if (frame.contentDocument?.readyState === 'complete') resize();
+}
 };
-if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded',ready);
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready);
 else ready();
 })();

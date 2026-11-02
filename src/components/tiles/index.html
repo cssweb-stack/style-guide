@@ -1,0 +1,209 @@
+---
+layout: layouts/base.njk
+title: "Tiles"
+hidePageTitle: true
+permalink: "/components/tiles/"
+description: "Tiles examples and usage guidance for College of Social Sciences websites."
+---
+{% from "components/button.njk" import button %}
+{% from "components/layouts.njk" import mediaRow, grid %}
+{% from "components/mini-callout.njk" import miniCallout %}
+<div class="sg-reference">
+<nav class="sg-breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | url }}">Home</a><span aria-hidden="true"> / </span><span>Components</span></nav>
+<div class="page-header"><h1>Tiles</h1><p class="intro-highlight">Components reference.</p><p class="page-intro">Combine shared colors and finishes with icon, degree, date, funding, or navigation content.</p></div>
+<section class="sg-section" id="tiles" aria-labelledby="tiles-heading"><h2 id="tiles-heading">Tiles</h2><p>Color, layout, and finish are separate. Pair .tile with a color and a content layout such as .icon-tile, .date-tile, or .program-tile. A bare tile does not set a square size by itself.</p>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Green icon tile</h3><p><code>.tile .tile-green .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-green icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Green tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-green icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Green tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Teal icon tile</h3><p><code>.tile .tile-teal .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-teal icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Teal tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-teal icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Teal tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Blue icon tile</h3><p><code>.tile .tile-blue .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-blue icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Blue tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-blue icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Blue tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Purple icon tile</h3><p><code>.tile .tile-purple .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-purple icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Purple tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-purple icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Purple tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Bronze icon tile</h3><p><code>.tile .tile-bronze .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-bronze icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Bronze tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-bronze icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Bronze tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Brown icon tile</h3><p><code>.tile .tile-brown .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-brown icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Brown tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-brown icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Brown tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Pink icon tile</h3><p><code>.tile .tile-pink .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-pink icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Pink tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-pink icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Pink tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Gold icon tile</h3><p><code>.tile .tile-gold .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-gold icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Gold tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-gold icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Gold tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Black icon tile</h3><p><code>.tile .tile-black .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-black icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Black tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-black icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Black tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Degree Tile</h3><p><code>.tile .degree-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-purple degree-tile">
+<span>MA</span>
+<span>Sample degree</span>
+</div>
+<div class="media-content"><p>Sample degree tile.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-purple degree-tile&quot;&gt;
+&lt;span&gt;MA&lt;/span&gt;
+&lt;span&gt;Sample degree&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Sample degree tile.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Date Tile</h3><p><code>.tile .date-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-purple date-tile">
+<span>JAN</span>
+<strong>15</strong>
+<span>Sample date</span>
+</div>
+<div class="media-content"><p>Sample date tile.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-purple date-tile&quot;&gt;
+&lt;span&gt;JAN&lt;/span&gt;
+&lt;strong&gt;15&lt;/strong&gt;
+&lt;span&gt;Sample date&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Sample date tile.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Funding Tile</h3><p><code>.tile .funding-tile</code></p><p>Current behavior: Funding Sources text centering is still a pending refinement. This guide shows the existing rule honestly.</p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-purple funding-tile">
+<h2>Sample funding</h2>
+</div>
+<div class="media-content"><p>Sample funding tile.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-purple funding-tile&quot;&gt;
+&lt;h2&gt;Sample funding&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Sample funding tile.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Navigation tiles in a five-column grid</h3><p><code>.grid-five · .program-tile · .tile</code></p></div>
+<div class="sg-specimen">
+<div class="grid-five">
+<a class="program-tile tile tile-bronze" href="#tiles"><span class="program-tile-title">One</span><span class="program-tile-label">Example</span></a>
+<a class="program-tile tile tile-purple" href="#tiles"><span class="program-tile-title">Two</span><span class="program-tile-label">Example</span></a>
+<a class="program-tile tile tile-teal" href="#tiles"><span class="program-tile-title">Three</span><span class="program-tile-label">Example</span></a>
+<a class="program-tile tile tile-blue" href="#tiles"><span class="program-tile-title">Four</span><span class="program-tile-label">Example</span></a>
+<a class="program-tile tile tile-brown" href="#tiles"><span class="program-tile-title">Five</span><span class="program-tile-label">Example</span></a>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;grid-five&quot;&gt;
+&lt;a class=&quot;program-tile tile tile-bronze&quot; href=&quot;#tiles&quot;&gt;&lt;span class=&quot;program-tile-title&quot;&gt;One&lt;/span&gt;&lt;span class=&quot;program-tile-label&quot;&gt;Example&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;program-tile tile tile-purple&quot; href=&quot;#tiles&quot;&gt;&lt;span class=&quot;program-tile-title&quot;&gt;Two&lt;/span&gt;&lt;span class=&quot;program-tile-label&quot;&gt;Example&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;program-tile tile tile-teal&quot; href=&quot;#tiles&quot;&gt;&lt;span class=&quot;program-tile-title&quot;&gt;Three&lt;/span&gt;&lt;span class=&quot;program-tile-label&quot;&gt;Example&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;program-tile tile tile-blue&quot; href=&quot;#tiles&quot;&gt;&lt;span class=&quot;program-tile-title&quot;&gt;Four&lt;/span&gt;&lt;span class=&quot;program-tile-label&quot;&gt;Example&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;program-tile tile tile-brown&quot; href=&quot;#tiles&quot;&gt;&lt;span class=&quot;program-tile-title&quot;&gt;Five&lt;/span&gt;&lt;span class=&quot;program-tile-label&quot;&gt;Example&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+</section><nav class="sg-related" aria-label="More components examples"><p><strong>Components</strong></p><ul><li><a href="{{ '/components/buttons/' | url }}">Buttons</a></li><li><a href="{{ '/components/callouts/' | url }}">Callouts</a></li><li><a href="{{ '/components/tiles/' | url }}">Tiles</a></li><li><a href="{{ '/components/photo-frames/' | url }}">Photo Frames</a></li><li><a href="{{ '/components/faculty-profiles/' | url }}">Faculty Profiles</a></li><li><a href="{{ '/components/advising/' | url }}">Advising</a></li><li><a href="{{ '/components/icons/' | url }}">Icons</a></li><li><a href="{{ '/components/bluesky/' | url }}">Bluesky Feed</a></li></ul></nav></div>
+<script src="{{ '/assets/style-guide.js' | url }}" defer></script>

@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+title: "Colors"
+hidePageTitle: true
+permalink: "/colors/"
+description: "Colors examples and usage guidance for College of Social Sciences websites."
+---
+{% from "components/button.njk" import button %}
+{% from "components/layouts.njk" import mediaRow, grid %}
+{% from "components/mini-callout.njk" import miniCallout %}
+<div class="sg-reference">
+<nav class="sg-breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | url }}">Home</a><span aria-hidden="true"> / </span><span>Foundations</span></nav>
+<div class="page-header"><h1>Colors</h1><p class="intro-highlight">Foundations reference.</p><p class="page-intro">Choose from the shared palette. Component examples show which color variants each family supports.</p></div>
+<section class="sg-section" id="palette" aria-labelledby="palette-heading"><h2 id="palette-heading">Colors</h2><p>Tokens are defined in css-shared/src/common.css. Component families support the variants shown in their own examples below.</p>
+<div class="sg-swatch-grid"><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-green);"></div><div class="sg-swatch-label"><p><strong>Green</strong></p><p><code>--color-green</code></p><p data-color-value>#024731</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-teal);"></div><div class="sg-swatch-label"><p><strong>Teal</strong></p><p><code>--color-teal</code></p><p data-color-value>#27665d</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-blue);"></div><div class="sg-swatch-label"><p><strong>Blue</strong></p><p><code>--color-blue</code></p><p data-color-value>#354d67</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-purple);"></div><div class="sg-swatch-label"><p><strong>Purple</strong></p><p><code>--color-purple</code></p><p data-color-value>#655b7a</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-bronze);"></div><div class="sg-swatch-label"><p><strong>Bronze</strong></p><p><code>--color-bronze</code></p><p data-color-value>#755322</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-brown);"></div><div class="sg-swatch-label"><p><strong>Brown</strong></p><p><code>--color-brown</code></p><p data-color-value>#835044</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-pink);"></div><div class="sg-swatch-label"><p><strong>Pink</strong></p><p><code>--color-pink</code></p><p data-color-value>#943c70</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-gold);"></div><div class="sg-swatch-label"><p><strong>Gold</strong></p><p><code>--color-gold</code></p><p data-color-value>#b58a24</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-black);"></div><div class="sg-swatch-label"><p><strong>Black</strong></p><p><code>--color-black</code></p><p data-color-value>#222222</p></div></div></div></section></div>
+<script src="{{ '/assets/style-guide.js' | url }}" defer></script>

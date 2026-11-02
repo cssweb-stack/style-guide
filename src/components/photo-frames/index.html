@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+title: "Photo Frames"
+hidePageTitle: true
+permalink: "/components/photo-frames/"
+description: "Photo Frames examples and usage guidance for College of Social Sciences websites."
+---
+{% from "components/button.njk" import button %}
+{% from "components/layouts.njk" import mediaRow, grid %}
+{% from "components/mini-callout.njk" import miniCallout %}
+<div class="sg-reference">
+<nav class="sg-breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | url }}">Home</a><span aria-hidden="true"> / </span><span>Components</span></nav>
+<div class="page-header"><h1>Photo Frames</h1><p class="intro-highlight">Components reference.</p><p class="page-intro">Choose a small, medium, or large photo mat while keeping a shared border and shadow.</p></div>
+<section class="sg-section" id="frames" aria-labelledby="frames-heading"><h2 id="frames-heading">Photo frames</h2>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Small photo mat</h3><p><code>.photo-frame .photo-frame-small</code></p><p>Mat sizes are 3px, 6px, and 9px. These are independent of the media column sizes. The guide limits each displayed image to 212px.</p></div>
+<div class="sg-specimen">
+<img class="sg-frame-preview photo-frame photo-frame-small" src="{{ '/_media/examples/sample-photo.svg' | url }}" alt="Sample portrait illustration" width="400" height="400" loading="lazy">
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;img class=&quot;photo-frame photo-frame-small&quot; src=&quot;{{ &#x27;/_media/examples/sample-photo.svg&#x27; | url }}&quot; alt=&quot;Sample portrait illustration&quot; width=&quot;400&quot; height=&quot;400&quot; loading=&quot;lazy&quot;&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Medium photo mat</h3><p><code>.photo-frame .photo-frame-medium</code></p><p>Mat sizes are 3px, 6px, and 9px. These are independent of the media column sizes. The guide limits each displayed image to 212px.</p></div>
+<div class="sg-specimen">
+<img class="sg-frame-preview photo-frame photo-frame-medium" src="{{ '/_media/examples/sample-photo.svg' | url }}" alt="Sample portrait illustration" width="400" height="400" loading="lazy">
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;img class=&quot;photo-frame photo-frame-medium&quot; src=&quot;{{ &#x27;/_media/examples/sample-photo.svg&#x27; | url }}&quot; alt=&quot;Sample portrait illustration&quot; width=&quot;400&quot; height=&quot;400&quot; loading=&quot;lazy&quot;&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Large photo mat</h3><p><code>.photo-frame .photo-frame-large</code></p><p>Mat sizes are 3px, 6px, and 9px. These are independent of the media column sizes. The guide limits each displayed image to 212px.</p></div>
+<div class="sg-specimen">
+<img class="sg-frame-preview photo-frame photo-frame-large" src="{{ '/_media/examples/sample-photo.svg' | url }}" alt="Sample portrait illustration" width="400" height="400" loading="lazy">
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;img class=&quot;photo-frame photo-frame-large&quot; src=&quot;{{ &#x27;/_media/examples/sample-photo.svg&#x27; | url }}&quot; alt=&quot;Sample portrait illustration&quot; width=&quot;400&quot; height=&quot;400&quot; loading=&quot;lazy&quot;&gt;{% endraw %}</code></pre></div></details>
+</article>
+</section><nav class="sg-related" aria-label="More components examples"><p><strong>Components</strong></p><ul><li><a href="{{ '/components/buttons/' | url }}">Buttons</a></li><li><a href="{{ '/components/callouts/' | url }}">Callouts</a></li><li><a href="{{ '/components/tiles/' | url }}">Tiles</a></li><li><a href="{{ '/components/photo-frames/' | url }}">Photo Frames</a></li><li><a href="{{ '/components/faculty-profiles/' | url }}">Faculty Profiles</a></li><li><a href="{{ '/components/advising/' | url }}">Advising</a></li><li><a href="{{ '/components/icons/' | url }}">Icons</a></li><li><a href="{{ '/components/bluesky/' | url }}">Bluesky Feed</a></li></ul></nav></div>
+<script src="{{ '/assets/style-guide.js' | url }}" defer></script>

@@ -1,0 +1,127 @@
+---
+layout: layouts/base.njk
+title: "Buttons"
+hidePageTitle: true
+permalink: "/components/buttons/"
+description: "Buttons examples and usage guidance for College of Social Sciences websites."
+---
+{% from "components/button.njk" import button %}
+{% from "components/layouts.njk" import mediaRow, grid %}
+{% from "components/mini-callout.njk" import miniCallout %}
+<div class="sg-reference">
+<nav class="sg-breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | url }}">Home</a><span aria-hidden="true"> / </span><span>Components</span></nav>
+<div class="page-header"><h1>Buttons</h1><p class="intro-highlight">Components reference.</p><p class="page-intro">Use one shared button family with selectable colors, treatments, icons, and arrows.</p></div>
+<section class="sg-section" id="buttons" aria-labelledby="buttons-heading"><h2 id="buttons-heading">Buttons</h2><p>One family with seven supported colors, three treatments, and optional icons or arrows. All have a minimum 44px target. Macro arguments: label, href, color, icon, arrow, treatment.</p>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Green button</h3><p><code>.button .button-green</code></p></div>
+<div class="sg-specimen">
+{% from "components/button.njk" import button %}
+{{ button("Green button", "#buttons", "green") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Green button&quot;, &quot;#buttons&quot;, &quot;green&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Teal button</h3><p><code>.button .button-teal</code></p></div>
+<div class="sg-specimen">
+{% from "components/button.njk" import button %}
+{{ button("Teal button", "#buttons", "teal") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Teal button&quot;, &quot;#buttons&quot;, &quot;teal&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Blue button</h3><p><code>.button .button-blue</code></p></div>
+<div class="sg-specimen">
+{% from "components/button.njk" import button %}
+{{ button("Blue button", "#buttons", "blue") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Blue button&quot;, &quot;#buttons&quot;, &quot;blue&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Purple button</h3><p><code>.button .button-purple</code></p></div>
+<div class="sg-specimen">
+{% from "components/button.njk" import button %}
+{{ button("Purple button", "#buttons", "purple") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Purple button&quot;, &quot;#buttons&quot;, &quot;purple&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Bronze button</h3><p><code>.button .button-bronze</code></p></div>
+<div class="sg-specimen">
+{% from "components/button.njk" import button %}
+{{ button("Bronze button", "#buttons", "bronze") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Bronze button&quot;, &quot;#buttons&quot;, &quot;bronze&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Brown button</h3><p><code>.button .button-brown</code></p></div>
+<div class="sg-specimen">
+{% from "components/button.njk" import button %}
+{{ button("Brown button", "#buttons", "brown") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Brown button&quot;, &quot;#buttons&quot;, &quot;brown&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Pink button</h3><p><code>.button .button-pink</code></p></div>
+<div class="sg-specimen">
+{% from "components/button.njk" import button %}
+{{ button("Pink button", "#buttons", "pink") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Pink button&quot;, &quot;#buttons&quot;, &quot;pink&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Filled treatment</h3><p><code>.button-filled</code></p></div>
+<div class="sg-specimen">
+{{ button("Filled button", "#buttons", "blue", "", false, "filled") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Filled button&quot;, &quot;#buttons&quot;, &quot;blue&quot;, &quot;&quot;, false, &quot;filled&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Outline treatment</h3><p><code>.button-outline</code></p></div>
+<div class="sg-specimen">
+{{ button("Outline button", "#buttons", "blue", "", false, "outline") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Outline button&quot;, &quot;#buttons&quot;, &quot;blue&quot;, &quot;&quot;, false, &quot;outline&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Soft treatment</h3><p><code>.button-soft</code></p></div>
+<div class="sg-specimen">
+{{ button("Soft button", "#buttons", "blue", "", false, "soft") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Soft button&quot;, &quot;#buttons&quot;, &quot;blue&quot;, &quot;&quot;, false, &quot;soft&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Icon on the left</h3><p><code>components/button.njk → button()</code></p><p>Hover with the pointer, or use Tab to inspect the real shared focus treatment. These sample links stay in this section.</p></div>
+<div class="sg-specimen">
+{{ button("Email the department", "#buttons", "blue", "envelope") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Email the department&quot;, &quot;#buttons&quot;, &quot;blue&quot;, &quot;envelope&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Arrow on the right</h3><p><code>components/button.njk → button()</code></p><p>Hover with the pointer, or use Tab to inspect the real shared focus treatment. These sample links stay in this section.</p></div>
+<div class="sg-specimen">
+{{ button("Explore the program", "#buttons", "purple", "", true) }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Explore the program&quot;, &quot;#buttons&quot;, &quot;purple&quot;, &quot;&quot;, true) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Icon and arrow</h3><p><code>components/button.njk → button()</code></p><p>Hover with the pointer, or use Tab to inspect the real shared focus treatment. These sample links stay in this section.</p></div>
+<div class="sg-specimen">
+{{ button("Read the handbook", "#buttons", "green", "book", true, "outline") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Read the handbook&quot;, &quot;#buttons&quot;, &quot;green&quot;, &quot;book&quot;, true, &quot;outline&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+</section><nav class="sg-related" aria-label="More components examples"><p><strong>Components</strong></p><ul><li><a href="{{ '/components/buttons/' | url }}">Buttons</a></li><li><a href="{{ '/components/callouts/' | url }}">Callouts</a></li><li><a href="{{ '/components/tiles/' | url }}">Tiles</a></li><li><a href="{{ '/components/photo-frames/' | url }}">Photo Frames</a></li><li><a href="{{ '/components/faculty-profiles/' | url }}">Faculty Profiles</a></li><li><a href="{{ '/components/advising/' | url }}">Advising</a></li><li><a href="{{ '/components/icons/' | url }}">Icons</a></li><li><a href="{{ '/components/bluesky/' | url }}">Bluesky Feed</a></li></ul></nav></div>
+<script src="{{ '/assets/style-guide.js' | url }}" defer></script>

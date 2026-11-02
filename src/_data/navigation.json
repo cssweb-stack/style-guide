@@ -1,83 +1,102 @@
 [
   {
-    "label": "Components",
+    "label": "Home",
     "url": "/"
   },
   {
-    "label": "Browse components",
+    "label": "Colors",
+    "url": "/colors/"
+  },
+  {
+    "label": "Typography",
     "children": [
       {
-        "label": "Colors",
-        "url": "/#palette"
+        "label": "Headings and Introductions",
+        "url": "/typography/headings/"
       },
       {
-        "label": "Typography",
-        "url": "/#typography"
+        "label": "Body Text and Links",
+        "url": "/typography/body-text/"
       },
       {
         "label": "Lists",
-        "url": "/#lists"
-      },
-      {
-        "label": "Media rows",
-        "url": "/#media-rows"
-      },
-      {
-        "label": "Grids",
-        "url": "/#grids"
-      },
-      {
-        "label": "Dividers and spacing",
-        "url": "/#dividers"
-      },
-      {
-        "label": "Buttons",
-        "url": "/#buttons"
-      },
-      {
-        "label": "Callouts",
-        "url": "/#callouts"
-      },
-      {
-        "label": "Tiles",
-        "url": "/#tiles"
-      },
-      {
-        "label": "Photo frames",
-        "url": "/#frames"
-      },
-      {
-        "label": "Faculty profiles",
-        "url": "/#profiles"
-      },
-      {
-        "label": "Advising",
-        "url": "/#advising"
-      },
-      {
-        "label": "Bluesky",
-        "url": "/#bluesky"
-      },
-      {
-        "label": "Icons",
-        "url": "/#icons"
-      },
-      {
-        "label": "Shared graphics",
-        "url": "/#graphics"
-      },
-      {
-        "label": "Where to edit",
-        "url": "/#ownership"
+        "url": "/typography/lists/"
       }
     ]
   },
   {
-    "label": "Site shell",
-    "url": "/shell/"
+    "label": "Layout",
+    "children": [
+      {
+        "label": "Media Rows",
+        "url": "/layout/media-rows/"
+      },
+      {
+        "label": "Grids",
+        "url": "/layout/grids/"
+      },
+      {
+        "label": "Dividers and Spacing",
+        "url": "/layout/dividers-and-spacing/"
+      }
+    ]
   },
   {
-    "label": "Where to edit",
-    "url": "/#ownership"
+    "label": "Components",
+    "children": [
+      {
+        "label": "Buttons",
+        "url": "/components/buttons/"
+      },
+      {
+        "label": "Callouts",
+        "url": "/components/callouts/"
+      },
+      {
+        "label": "Tiles",
+        "url": "/components/tiles/"
+      },
+      {
+        "label": "Photo Frames",
+        "url": "/components/photo-frames/"
+      },
+      {
+        "label": "Faculty Profiles",
+        "url": "/components/faculty-profiles/"
+      },
+      {
+        "label": "Advising",
+        "url": "/components/advising/"
+      },
+      {
+        "label": "Icons",
+        "url": "/components/icons/"
+      },
+      {
+        "label": "Bluesky Feed",
+        "url": "/components/bluesky/"
+      }
+    ]
+  },
+  {
+    "label": "Heroes",
+    "children": [
+      {
+        "label": "Hero Only",
+        "url": "/heroes/hero-only/"
+      },
+      {
+        "label": "Hero with Label",
+        "url": "/heroes/with-label/"
+      },
+      {
+        "label": "Hero with Label and Attribution",
+        "url": "/heroes/with-label-and-attribution/"
+      }
+    ]
+  },
+  {
+    "label": "Site Shell",
+    "url": "/shell/"
   }
 ]

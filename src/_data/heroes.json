@@ -33,6 +33,10 @@
     },
     "privacy": {
       "color": "#354d67"
+    },
+    "decorative": {
+      "color": "#354d67",
+      "grayscale": 0
     }
   },
   "credit": {
@@ -40,17 +44,16 @@
     "url": "https://esa-worldcover.org/en/data-access"
   },
   "pages": {
-    "/": {
+    "/heroes/hero-only/": {
+      "section": "decorative",
+      "image": "watercolor.webp"
+    },
+    "/heroes/with-label/": {
       "section": "home",
       "image": "honolulu-oahu.webp",
       "location": "Honolulu, Oʻahu, Hawaiʻi"
     },
-    "/shell/": {
-      "section": "home",
-      "image": "honolulu-oahu.webp",
-      "location": "Honolulu, Oʻahu, Hawaiʻi"
-    },
-    "/privacy/": {
+    "/heroes/with-label-and-attribution/": {
       "section": "home",
       "image": "honolulu-oahu.webp",
       "location": "Honolulu, Oʻahu, Hawaiʻi"

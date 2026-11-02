@@ -1,42 +1,30 @@
-# CSS Website Style Guide
+# College Website Style Guide
 
-Two main reference pages: Content Components at / and Site Shell at /shell/. A separate typography specimen preserves one H1 per document. Privacy information is at /privacy/.
+Reorganized into a purpose-led homepage and dedicated reference pages. Navigation: Home, Colors, Typography, Layout, Components, Heroes, Site Shell. Heroes contains Hero Only; Hero with Label; Hero with Label and Attribution.
 
-## Local setup on your Mac
+The guide has no sitewide hero. Only the three hero example pages show one. A shared base-layout setting, site.hero.enabled=false, controls omission; it defaults to enabled for existing sites. The two independent options showLocation and showAttribution remain available. GEO, SOC, and WGSS retain their current behavior.
 
-Clone cssweb-stack/style-guide beside css-shared, geo, and soc. Copy this folder’s contents into that empty clone, including .github and .gitignore. Keep the clone’s .git folder. In VS Code use File > Add Folder to Workspace, select style-guide, then right-click that folder > Open in Integrated Terminal.
+## Installation on your Mac
 
-```
-npm ci
-npm run dev
-```
+1. From the package, replace css-shared/src/_includes/layouts/base.njk in your existing LOCAL css-shared repository. Keep the previously installed WGSS hero component update.
+2. In GitHub Desktop select css-shared. Summary: Allow pages without a hero. Commit to main, then Push origin.
+3. In your existing LOCAL style-guide repository, replace the ENTIRE src folder with this package’s style-guide/src folder. Do not replace the outer repository folder or .git. Shared generated files are restored automatically at build time.
+4. Replace README.md if desired. All other existing root files remain unchanged.
+5. In VS Code, stop the guide preview if running and restart npm run dev in the style-guide terminal. Dependencies and package.json have not changed. Local port remains 8082.
+6. In GitHub Desktop select style-guide. Summary: Organize style guide into focused reference pages. Commit to main, then Push origin. Check Actions for green.
 
-The guide uses port 8082. Keep GEO on 8080 and SOC on 8081. Each site needs a running terminal only when you want its local preview.
+Shared first, style-guide second. GEO, SOC and WGSS need no source changes.
 
-## GitHub Pages
+## What changed
 
-On the GitHub website choose style-guide > Settings > Pages > Build and deployment > Source > GitHub Actions. In GitHub Desktop select style-guide, enter “Add shared website style guide”, click Commit to main, then Publish branch or Push origin. Check Actions > Build and publish Style Guide. Intended public URL: https://cssweb-stack.github.io/style-guide/.
+The homepage explains the purpose and provides six category links. Typography separates headings/introductions, body text/links, and lists. Layout separates media rows, grids, and dividers/spacing. Components each have their own pages, including icons and the optional Bluesky reference. Site Shell documents header, navigation, search and footer, with separate graphics and maintainer reference pages.
 
-## Source ownership
+Examples continue to use the actual shared CSS and includes. Code remains collapsed until needed. The H1 editing slider is removed: this is a reference guide rather than a design editor. Copy buttons, live palette values and spacing measurements remain. An isolated heading specimen retains a single H1 per document. Old homepage section bookmarks redirect to their new dedicated pages.
 
-The real component rules and includes come from cssweb-stack/css-shared. The guide adds labels, code panels and specimen frames in src/style-guide.css. The shared base layout still requests geo.css; Eleventy publishes the guide-only stylesheet under that compatibility output name. Never edit generated shared copies inside this repository.
+## Ownership
 
-Classes, variants and code examples document the current shared implementation. Pending changes, including funding tile text centering and centralizing remaining hero appearance settings, are called out rather than silently corrected.
-
-## Browser-only H1 preview
-
-The slider changes the H1 inside the typography iframe. It writes no files, makes no network calls, and does not change GEO, SOC or shared source. Reset removes its inline preview value. The suggested CSS is displayed for review, not applied globally.
+Shared rules: css-shared/src/common.css and shell.css. Shared markup: css-shared/src/_includes. Guide-only presentation: style-guide/src/style-guide.css. Guide content: local page folders. Navigation: src/_data/navigation.json. Unit identity: src/_data/site.json. Hero assignments: src/_data/heroes.json. The current shared base still requests geo.css; Eleventy maps local style-guide.css to that compatibility output name.
 
 ## Preview branches
 
-An online preview can use a separate shared branch by changing this guide’s shared.config.json ref. Keep GEO and SOC configured to main. Local builds use localPath or SHARED_SOURCE, not the ref: they read whichever branch is checked out in that local shared folder. For simultaneous stable and preview builds, use a separate css-shared-preview clone and point the guide’s localPath to it. Merge approved shared changes to main to release them on the next site rebuild.
-
-Hourly workflows rebuild against the configured shared ref. GitHub schedules can be delayed. Use Actions > Build and publish Style Guide > Run workflow for a manual build.
-
-## Current reference
-
-Includes colors, H1-H6, tagline/lead/body text, notes, credits, six list examples including all four nesting combinations, three media widths, three- and five-column grids, all divider/spacer sizes, white divider, seven button colors, filled/outline/soft treatments, icons/arrows, seven callout colors, four mini callouts, nine tile colors, degree/date/funding/navigation tiles, three photo mats, complete/minimal faculty cards, advising, a static Bluesky card, and the shared shell ownership map. Code panels support copy with a manual fallback.
-
-No live Bluesky account or analytics is configured. Sample portraits are generic SVG illustrations; sample contacts use example.invalid. The demonstration hero carries the existing GEO source credit.
-
-Also includes a gallery of all 22 current shared icons, the university logo, and six shared background assets. Palette hex labels and media/divider measurements update from the loaded styles in the browser.
+Local builds read the shared folder’s checked-out files. Published builds fetch the configured repository and ref. Use a separate preview checkout/branch for experimental shared changes while published sites remain on main. This guide does not publish style changes from its browser UI.
