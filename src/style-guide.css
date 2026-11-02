@@ -1,0 +1,216 @@
+/* Guide presentation only. Shared styles are never redefined here.
+Compatibility: the shared base template requests geo.css; Eleventy maps this
+local source to that output filename. */
+.sg-reference, .sg-shell-reference {
+--sg-border: #dbe2e8;
+--sg-surface: #f5f7fa;
+}
+.sg-index {
+display: flex;
+flex-wrap: wrap;
+gap: .5rem;
+margin-block: 1.5rem 2rem;
+}
+.sg-index a {
+display: inline-flex;
+align-items: center;
+min-height: 44px;
+padding: .5rem .875rem;
+border: 1px solid #cbd5df;
+border-radius: 999px;
+text-decoration: none;
+background: #fff;
+}
+.sg-section {
+scroll-margin-top: 18rem;
+margin-block: 3rem;
+}
+.sg-entry {
+margin-block: 1.5rem;
+border: 1px solid var(--sg-border);
+border-radius: .5rem;
+overflow: clip;
+}
+.sg-entry-meta {
+padding: 1rem 1.25rem;
+background: var(--sg-surface);
+border-bottom: 1px solid var(--sg-border);
+}
+.site-main .sg-entry-meta h3 {
+margin: 0 0 .375rem;
+font-size: 1rem;
+}
+.site-main .sg-entry-meta p {
+margin: 0;
+font-size: .875rem;
+}
+.sg-specimen {
+padding: 1.5rem;
+min-width: 0;
+}
+.sg-specimen > :last-child {
+margin-bottom: 0;
+}
+.sg-entry details {
+border-top: 1px solid var(--sg-border);
+}
+.sg-entry summary {
+padding: .75rem 1.25rem;
+min-height: 44px;
+font-weight: 600;
+cursor: pointer;
+}
+.sg-code {
+padding: 0 1.25rem 1.25rem;
+}
+.sg-code pre, .sg-preview-code {
+margin: .75rem 0 0;
+padding: 1rem;
+background: #f3f5f8;
+color: #253548;
+border-radius: .25rem;
+white-space: pre-wrap;
+overflow-wrap: anywhere;
+font-size: .8125rem;
+line-height: 1.6;
+}
+.sg-copy {
+min-height: 44px;
+padding: .5rem .875rem;
+border: 1px solid #354d67;
+border-radius: .25rem;
+background: #fff;
+color: #354d67;
+font: inherit;
+font-size: .875rem;
+cursor: pointer;
+}
+.sg-code-status {
+margin-left: .75rem;
+font-size: .875rem;
+}
+.sg-flow {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+gap: .75rem;
+}
+.sg-swatch-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(min(100%,160px),1fr));
+gap: 1rem;
+}
+.sg-swatch {
+border: 1px solid var(--sg-border);
+border-radius: .375rem;
+overflow: hidden;
+}
+.sg-swatch-color {
+height: 5rem;
+background: var(--sg-color);
+}
+.sg-swatch-label {
+padding: .75rem;
+}
+.site-main .sg-swatch-label p {
+margin: 0;
+font-size: .875rem;
+}
+.sg-rule-demo {
+border-inline: 1px dashed #a0afbf;
+background: #fafbfd;
+}
+.sg-space-demo {
+background: #edf2f7;
+border-block: 1px dashed #a0afbf;
+}
+.sg-dark {
+padding: 1rem;
+background: #354d67;
+color: #fff;
+}
+.sg-grid-cell {
+min-height: 5rem;
+padding: 1rem;
+background: #edf2f7;
+border: 1px dashed #a0afbf;
+}
+.sg-table-wrap {
+overflow-x: auto;
+}
+.sg-table {
+width: 100%;
+border-collapse: collapse;
+font-size: .9375rem;
+}
+.sg-table th, .sg-table td {
+padding: .75rem;
+text-align: left;
+vertical-align: top;
+border-bottom: 1px solid var(--sg-border);
+}
+.sg-table code, .sg-entry-meta code {
+overflow-wrap: anywhere;
+}
+.sg-preview-controls {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+gap: .75rem;
+padding: 1rem;
+background: #fff8e6;
+margin-bottom: 1rem;
+}
+.sg-preview-controls input {
+width: min(100%,220px);
+}
+.sg-typography-frame {
+display: block;
+width: 100%;
+height: 920px;
+border: 1px solid var(--sg-border);
+background: white;
+}
+.sg-icon-list {
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+gap: 1rem;
+}
+.sg-icon-item svg {
+width: 24px;
+height: 24px;
+margin-right: .5rem;
+}
+.sg-frame-preview {
+width: 212px;
+max-width: 100%;
+height: auto;
+}
+.sg-profile-grid {
+display: grid;
+grid-template-columns: repeat(2,minmax(0,1fr));
+gap: 2rem;
+}
+.sg-label {
+font-size: .875rem;
+color: #555;
+}
+@media (max-width: 575.98px) {
+.sg-specimen {
+padding: 1rem;
+}
+.sg-profile-grid {
+grid-template-columns: 1fr;
+}
+.sg-typography-frame {
+height: 1130px;
+}
+}
+
+.sg-asset-panel {
+height: 130px;
+border: 1px solid #cbd5df;
+border-radius: .25rem;
+background-size: cover;
+background-position: center;
+}

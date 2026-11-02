@@ -1,0 +1,919 @@
+---
+layout: layouts/base.njk
+title: "Content Components"
+hidePageTitle: true
+permalink: "/"
+description: "Living examples, class names, includes, and copyable code for the CSS shared website foundation."
+---
+{% from "components/button.njk" import button %}
+{% from "components/layouts.njk" import mediaRow, grid %}
+{% from "components/mini-callout.njk" import miniCallout %}
+<div class="sg-reference">
+<div class="page-header"><h1>Content Components</h1><p class="intro-highlight">Choose it. Name it. Reuse it.</p><p class="page-intro">A living reference built with the same shared files as GEO and SOC. Open an example’s code panel to copy its markup.</p></div>
+<nav class="sg-index" aria-label="Component sections"><a href="#palette">Colors</a><a href="#typography">Typography</a><a href="#lists">Lists</a><a href="#media-rows">Media rows</a><a href="#grids">Grids</a><a href="#dividers">Dividers and spacing</a><a href="#buttons">Buttons</a><a href="#callouts">Callouts</a><a href="#tiles">Tiles</a><a href="#frames">Photo frames</a><a href="#profiles">Faculty profiles</a><a href="#advising">Advising</a><a href="#bluesky">Bluesky</a><a href="#icons">Icons</a><a href="#graphics">Shared graphics</a><a href="#ownership">Where to edit</a></nav>
+<aside class="callout callout-blue"><h2>Preview safely</h2><p>Examples use the shared styles currently loaded by this guide. The H1 size control below changes only its specimen in your browser tab. It saves nothing and changes no other website.</p></aside>
+<section class="sg-section" id="palette" aria-labelledby="palette-heading"><h2 id="palette-heading">Colors</h2><p>Tokens are defined in css-shared/src/common.css. Component families support the variants shown in their own examples below.</p>
+<div class="sg-swatch-grid"><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-green);"></div><div class="sg-swatch-label"><p><strong>Green</strong></p><p><code>--color-green</code></p><p data-color-value>#024731</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-teal);"></div><div class="sg-swatch-label"><p><strong>Teal</strong></p><p><code>--color-teal</code></p><p data-color-value>#27665d</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-blue);"></div><div class="sg-swatch-label"><p><strong>Blue</strong></p><p><code>--color-blue</code></p><p data-color-value>#354d67</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-purple);"></div><div class="sg-swatch-label"><p><strong>Purple</strong></p><p><code>--color-purple</code></p><p data-color-value>#655b7a</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-bronze);"></div><div class="sg-swatch-label"><p><strong>Bronze</strong></p><p><code>--color-bronze</code></p><p data-color-value>#755322</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-brown);"></div><div class="sg-swatch-label"><p><strong>Brown</strong></p><p><code>--color-brown</code></p><p data-color-value>#835044</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-pink);"></div><div class="sg-swatch-label"><p><strong>Pink</strong></p><p><code>--color-pink</code></p><p data-color-value>#943c70</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-gold);"></div><div class="sg-swatch-label"><p><strong>Gold</strong></p><p><code>--color-gold</code></p><p data-color-value>#b58a24</p></div></div><div class="sg-swatch"><div class="sg-swatch-color" style="--sg-color:var(--color-black);"></div><div class="sg-swatch-label"><p><strong>Black</strong></p><p><code>--color-black</code></p><p data-color-value>#222222</p></div></div></div></section>
+<section class="sg-section" id="typography" aria-labelledby="typography-heading"><h2 id="typography-heading">Typography</h2>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Headings, tagline, lead, body, and notes</h3><p><code>h1–h6 · .intro-highlight · .page-intro · .text-note · .credits</code></p><p>The isolated specimen keeps its H1 separate from the guide’s document heading. H4–H6 currently use Bootstrap defaults; their appearance is documented rather than redefined.</p></div>
+<div class="sg-specimen">
+<div class="sg-preview-controls">
+<label for="sg-h1-size">H1 preview size</label>
+<input id="sg-h1-size" data-preview-size type="range" min="24" max="52" step="1" value="32" aria-describedby="sg-preview-help">
+<output for="sg-h1-size" data-preview-value>32px</output>
+<button class="sg-copy" type="button" data-preview-reset>Reset preview</button>
+</div>
+<p id="sg-preview-help" class="text-note">Only the H1 inside this specimen changes. To release a real shared change later, review it on a separate branch before merging to main.</p>
+<pre class="sg-preview-code" data-preview-code aria-live="polite">No preview override applied.</pre>
+<iframe class="sg-typography-frame" data-type-frame title="Shared typography specimen" src="{{ '/specimens/typography.html' | url }}"></iframe>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;h1&gt;Page heading&lt;/h1&gt;
+&lt;p class=&quot;intro-highlight&quot;&gt;Tagline beneath the heading.&lt;/p&gt;
+&lt;p class=&quot;page-intro&quot;&gt;A larger introductory paragraph.&lt;/p&gt;
+&lt;h2&gt;Section heading&lt;/h2&gt;
+&lt;h3&gt;Subsection heading&lt;/h3&gt;
+&lt;h4&gt;Fourth-level heading&lt;/h4&gt;
+&lt;h5&gt;Fifth-level heading&lt;/h5&gt;
+&lt;h6&gt;Sixth-level heading&lt;/h6&gt;
+&lt;p&gt;Body paragraph with &lt;strong&gt;emphasis&lt;/strong&gt; and &lt;a href=&quot;/&quot;&gt;a link&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;text-note&quot;&gt;A small explanatory note.&lt;/p&gt;
+&lt;p class=&quot;credits&quot;&gt;Credits (3 credits)&lt;/p&gt;{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="lists" aria-labelledby="lists-heading"><h2 id="lists-heading">Lists</h2><p>Nested lists belong inside the parent list item. All four combinations below use the shared list rules.</p>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Unordered list</h3><p><code>ul</code></p></div>
+<div class="sg-specimen">
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ul>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;ul&gt;
+&lt;li&gt;First item&lt;/li&gt;
+&lt;li&gt;Second item&lt;/li&gt;
+&lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Ordered list</h3><p><code>ol</code></p></div>
+<div class="sg-specimen">
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;ol&gt;
+&lt;li&gt;First item&lt;/li&gt;
+&lt;li&gt;Second item&lt;/li&gt;
+&lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>UL containing UL</h3><p><code>ul &gt; li &gt; ul</code></p></div>
+<div class="sg-specimen">
+<ul>
+<li>First item
+<ul>
+<li>Nested first item</li>
+<li>Nested second item</li>
+</ul>
+</li>
+<li>Second item</li>
+</ul>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;ul&gt;
+&lt;li&gt;First item
+&lt;ul&gt;
+&lt;li&gt;Nested first item&lt;/li&gt;
+&lt;li&gt;Nested second item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Second item&lt;/li&gt;
+&lt;/ul&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>UL containing OL</h3><p><code>ul &gt; li &gt; ol</code></p></div>
+<div class="sg-specimen">
+<ul>
+<li>First item
+<ol>
+<li>Nested first item</li>
+<li>Nested second item</li>
+</ol>
+</li>
+<li>Second item</li>
+</ul>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;ul&gt;
+&lt;li&gt;First item
+&lt;ol&gt;
+&lt;li&gt;Nested first item&lt;/li&gt;
+&lt;li&gt;Nested second item&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Second item&lt;/li&gt;
+&lt;/ul&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>OL containing UL</h3><p><code>ol &gt; li &gt; ul</code></p></div>
+<div class="sg-specimen">
+<ol>
+<li>First item
+<ul>
+<li>Nested first item</li>
+<li>Nested second item</li>
+</ul>
+</li>
+<li>Second item</li>
+</ol>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;ol&gt;
+&lt;li&gt;First item
+&lt;ul&gt;
+&lt;li&gt;Nested first item&lt;/li&gt;
+&lt;li&gt;Nested second item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Second item&lt;/li&gt;
+&lt;/ol&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>OL containing OL</h3><p><code>ol &gt; li &gt; ol</code></p></div>
+<div class="sg-specimen">
+<ol>
+<li>First item
+<ol>
+<li>Nested first item</li>
+<li>Nested second item</li>
+</ol>
+</li>
+<li>Second item</li>
+</ol>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;ol&gt;
+&lt;li&gt;First item
+&lt;ol&gt;
+&lt;li&gt;Nested first item&lt;/li&gt;
+&lt;li&gt;Nested second item&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Second item&lt;/li&gt;
+&lt;/ol&gt;{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="media-rows" aria-labelledby="media-rows-heading"><h2 id="media-rows-heading">Media and text rows</h2><p>Small: <span data-token="--media-width-small">7rem</span>; medium: <span data-token="--media-width-medium">10.125rem</span>; large: <span data-token="--media-width-large">13.25rem</span>. Gap: <span data-token="--media-gap">1.5rem</span>. Values are read from the shared tokens.</p>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Small left column</h3><p><code>.media-row .media-row-small</code></p><p>Widths come from --media-width-small. Rows stack below 768px; these are current values, not new sizing changes.</p></div>
+<div class="sg-specimen">
+{% from "components/layouts.njk" import mediaRow %}
+{% call mediaRow("small") %}
+<div class="media-visual tile tile-blue icon-tile">{% include "icons/book.svg" %}</div>
+<div class="media-content">
+<h3>Small media column</h3>
+<p>The left column uses the shared small width. The right column fills the available space.</p>
+</div>
+{% endcall %}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/layouts.njk&quot; import mediaRow %}
+{% call mediaRow(&quot;small&quot;) %}
+&lt;div class=&quot;media-visual tile tile-blue icon-tile&quot;&gt;{% include &quot;icons/book.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;
+&lt;h3&gt;Small media column&lt;/h3&gt;
+&lt;p&gt;The left column uses the shared small width. The right column fills the available space.&lt;/p&gt;
+&lt;/div&gt;
+{% endcall %}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Medium left column</h3><p><code>.media-row .media-row-medium</code></p><p>Widths come from --media-width-medium. Rows stack below 768px; these are current values, not new sizing changes.</p></div>
+<div class="sg-specimen">
+{% from "components/layouts.njk" import mediaRow %}
+{% call mediaRow("medium") %}
+<div class="media-visual tile tile-blue icon-tile">{% include "icons/book.svg" %}</div>
+<div class="media-content">
+<h3>Medium media column</h3>
+<p>The left column uses the shared medium width. The right column fills the available space.</p>
+</div>
+{% endcall %}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/layouts.njk&quot; import mediaRow %}
+{% call mediaRow(&quot;medium&quot;) %}
+&lt;div class=&quot;media-visual tile tile-blue icon-tile&quot;&gt;{% include &quot;icons/book.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;
+&lt;h3&gt;Medium media column&lt;/h3&gt;
+&lt;p&gt;The left column uses the shared medium width. The right column fills the available space.&lt;/p&gt;
+&lt;/div&gt;
+{% endcall %}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Large left column</h3><p><code>.media-row .media-row-large</code></p><p>Widths come from --media-width-large. Rows stack below 768px; these are current values, not new sizing changes.</p></div>
+<div class="sg-specimen">
+{% from "components/layouts.njk" import mediaRow %}
+{% call mediaRow("large") %}
+<div class="media-visual tile tile-blue icon-tile">{% include "icons/book.svg" %}</div>
+<div class="media-content">
+<h3>Large media column</h3>
+<p>The left column uses the shared large width. The right column fills the available space.</p>
+</div>
+{% endcall %}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/layouts.njk&quot; import mediaRow %}
+{% call mediaRow(&quot;large&quot;) %}
+&lt;div class=&quot;media-visual tile tile-blue icon-tile&quot;&gt;{% include &quot;icons/book.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;
+&lt;h3&gt;Large media column&lt;/h3&gt;
+&lt;p&gt;The left column uses the shared large width. The right column fills the available space.&lt;/p&gt;
+&lt;/div&gt;
+{% endcall %}{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="grids" aria-labelledby="grids-heading"><h2 id="grids-heading">Grids</h2>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>3 equal columns</h3><p><code>.grid-three</code></p><p>Guide-only pale backgrounds reveal the cells. Shared rules control the column widths, gaps, and stacking.</p></div>
+<div class="sg-specimen">
+<div class="grid-three"><div class="sg-grid-cell">Column 1</div><div class="sg-grid-cell">Column 2</div><div class="sg-grid-cell">Column 3</div></div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;grid-three&quot;&gt;
+&lt;div&gt;Column 1&lt;/div&gt;
+&lt;div&gt;Column 2&lt;/div&gt;
+&lt;div&gt;Column 3&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>5 equal columns</h3><p><code>.grid-five</code></p><p>Guide-only pale backgrounds reveal the cells. Shared rules control the column widths, gaps, and stacking.</p></div>
+<div class="sg-specimen">
+<div class="grid-five"><div class="sg-grid-cell">Column 1</div><div class="sg-grid-cell">Column 2</div><div class="sg-grid-cell">Column 3</div><div class="sg-grid-cell">Column 4</div><div class="sg-grid-cell">Column 5</div></div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;grid-five&quot;&gt;
+&lt;div&gt;Column 1&lt;/div&gt;
+&lt;div&gt;Column 2&lt;/div&gt;
+&lt;div&gt;Column 3&lt;/div&gt;
+&lt;div&gt;Column 4&lt;/div&gt;
+&lt;div&gt;Column 5&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="dividers" aria-labelledby="dividers-heading"><h2 id="dividers-heading">Dividers and spacing</h2><p>Small: <span data-token="--separator-small">0.75rem</span>; medium: <span data-token="--separator-medium">1.5rem</span>; large: <span data-token="--separator-large">2.25rem</span> on each side. Spacers reserve the same total height without drawing a line.</p>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Small divider</h3><p><code>.divider .divider-small</code></p><p>Tinted guide backgrounds reveal reserved space. Sizes change the space around a line; standard line thickness remains 1px.</p></div>
+<div class="sg-specimen">
+<div class="sg-rule-demo">{% include "components/divider-small.njk" %}</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% include &quot;components/divider-small.njk&quot; %}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Medium divider</h3><p><code>.divider .divider-medium</code></p><p>Tinted guide backgrounds reveal reserved space. Sizes change the space around a line; standard line thickness remains 1px.</p></div>
+<div class="sg-specimen">
+<div class="sg-rule-demo">{% include "components/divider-medium.njk" %}</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% include &quot;components/divider-medium.njk&quot; %}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Large divider</h3><p><code>.divider .divider-large</code></p><p>Tinted guide backgrounds reveal reserved space. Sizes change the space around a line; standard line thickness remains 1px.</p></div>
+<div class="sg-specimen">
+<div class="sg-rule-demo">{% include "components/divider-large.njk" %}</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% include &quot;components/divider-large.njk&quot; %}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Small spacer</h3><p><code>.space .space-small</code></p><p>Tinted guide backgrounds reveal reserved space. Sizes change the space around a line; standard line thickness remains 1px.</p></div>
+<div class="sg-specimen">
+<div class="sg-space-demo">{% include "components/space-small.njk" %}</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% include &quot;components/space-small.njk&quot; %}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Medium spacer</h3><p><code>.space .space-medium</code></p><p>Tinted guide backgrounds reveal reserved space. Sizes change the space around a line; standard line thickness remains 1px.</p></div>
+<div class="sg-specimen">
+<div class="sg-space-demo">{% include "components/space-medium.njk" %}</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% include &quot;components/space-medium.njk&quot; %}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Large spacer</h3><p><code>.space .space-large</code></p><p>Tinted guide backgrounds reveal reserved space. Sizes change the space around a line; standard line thickness remains 1px.</p></div>
+<div class="sg-specimen">
+<div class="sg-space-demo">{% include "components/space-large.njk" %}</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% include &quot;components/space-large.njk&quot; %}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>White divider</h3><p><code>.divider .divider-white</code></p><p>The white divider currently has its own 3px thickness token.</p></div>
+<div class="sg-specimen">
+<div class="sg-dark">{% include "components/divider-white.njk" %}</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% include &quot;components/divider-white.njk&quot; %}{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="buttons" aria-labelledby="buttons-heading"><h2 id="buttons-heading">Buttons</h2><p>One family with seven supported colors, three treatments, and optional icons or arrows. All have a minimum 44px target. Macro arguments: label, href, color, icon, arrow, treatment.</p>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Green button</h3><p><code>.button .button-green</code></p></div>
+<div class="sg-specimen">
+{% from "components/button.njk" import button %}
+{{ button("Green button", "#buttons", "green") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Green button&quot;, &quot;#buttons&quot;, &quot;green&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Teal button</h3><p><code>.button .button-teal</code></p></div>
+<div class="sg-specimen">
+{% from "components/button.njk" import button %}
+{{ button("Teal button", "#buttons", "teal") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Teal button&quot;, &quot;#buttons&quot;, &quot;teal&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Blue button</h3><p><code>.button .button-blue</code></p></div>
+<div class="sg-specimen">
+{% from "components/button.njk" import button %}
+{{ button("Blue button", "#buttons", "blue") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Blue button&quot;, &quot;#buttons&quot;, &quot;blue&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Purple button</h3><p><code>.button .button-purple</code></p></div>
+<div class="sg-specimen">
+{% from "components/button.njk" import button %}
+{{ button("Purple button", "#buttons", "purple") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Purple button&quot;, &quot;#buttons&quot;, &quot;purple&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Bronze button</h3><p><code>.button .button-bronze</code></p></div>
+<div class="sg-specimen">
+{% from "components/button.njk" import button %}
+{{ button("Bronze button", "#buttons", "bronze") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Bronze button&quot;, &quot;#buttons&quot;, &quot;bronze&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Brown button</h3><p><code>.button .button-brown</code></p></div>
+<div class="sg-specimen">
+{% from "components/button.njk" import button %}
+{{ button("Brown button", "#buttons", "brown") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Brown button&quot;, &quot;#buttons&quot;, &quot;brown&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Pink button</h3><p><code>.button .button-pink</code></p></div>
+<div class="sg-specimen">
+{% from "components/button.njk" import button %}
+{{ button("Pink button", "#buttons", "pink") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Pink button&quot;, &quot;#buttons&quot;, &quot;pink&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Filled treatment</h3><p><code>.button-filled</code></p></div>
+<div class="sg-specimen">
+{{ button("Filled button", "#buttons", "blue", "", false, "filled") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Filled button&quot;, &quot;#buttons&quot;, &quot;blue&quot;, &quot;&quot;, false, &quot;filled&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Outline treatment</h3><p><code>.button-outline</code></p></div>
+<div class="sg-specimen">
+{{ button("Outline button", "#buttons", "blue", "", false, "outline") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Outline button&quot;, &quot;#buttons&quot;, &quot;blue&quot;, &quot;&quot;, false, &quot;outline&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Soft treatment</h3><p><code>.button-soft</code></p></div>
+<div class="sg-specimen">
+{{ button("Soft button", "#buttons", "blue", "", false, "soft") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Soft button&quot;, &quot;#buttons&quot;, &quot;blue&quot;, &quot;&quot;, false, &quot;soft&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Icon on the left</h3><p><code>components/button.njk → button()</code></p><p>Hover with the pointer, or use Tab to inspect the real shared focus treatment. These sample links stay in this section.</p></div>
+<div class="sg-specimen">
+{{ button("Email the department", "#buttons", "blue", "envelope") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Email the department&quot;, &quot;#buttons&quot;, &quot;blue&quot;, &quot;envelope&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Arrow on the right</h3><p><code>components/button.njk → button()</code></p><p>Hover with the pointer, or use Tab to inspect the real shared focus treatment. These sample links stay in this section.</p></div>
+<div class="sg-specimen">
+{{ button("Explore the program", "#buttons", "purple", "", true) }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Explore the program&quot;, &quot;#buttons&quot;, &quot;purple&quot;, &quot;&quot;, true) }}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Icon and arrow</h3><p><code>components/button.njk → button()</code></p><p>Hover with the pointer, or use Tab to inspect the real shared focus treatment. These sample links stay in this section.</p></div>
+<div class="sg-specimen">
+{{ button("Read the handbook", "#buttons", "green", "book", true, "outline") }}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/button.njk&quot; import button %}
+{{ button(&quot;Read the handbook&quot;, &quot;#buttons&quot;, &quot;green&quot;, &quot;book&quot;, true, &quot;outline&quot;) }}{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="callouts" aria-labelledby="callouts-heading"><h2 id="callouts-heading">Callouts and mini callouts</h2>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Green callout</h3><p><code>.callout .callout-green</code></p></div>
+<div class="sg-specimen">
+<aside class="callout callout-green">
+<h3>Green callout</h3>
+<p>A short message, a requirement summary, or a next step.</p>
+</aside>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;aside class=&quot;callout callout-green&quot;&gt;
+&lt;h3&gt;Green callout&lt;/h3&gt;
+&lt;p&gt;A short message, a requirement summary, or a next step.&lt;/p&gt;
+&lt;/aside&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Blue callout</h3><p><code>.callout .callout-blue</code></p></div>
+<div class="sg-specimen">
+<aside class="callout callout-blue">
+<h3>Blue callout</h3>
+<p>A short message, a requirement summary, or a next step.</p>
+</aside>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;aside class=&quot;callout callout-blue&quot;&gt;
+&lt;h3&gt;Blue callout&lt;/h3&gt;
+&lt;p&gt;A short message, a requirement summary, or a next step.&lt;/p&gt;
+&lt;/aside&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Gold callout</h3><p><code>.callout .callout-gold</code></p></div>
+<div class="sg-specimen">
+<aside class="callout callout-gold">
+<h3>Gold callout</h3>
+<p>A short message, a requirement summary, or a next step.</p>
+</aside>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;aside class=&quot;callout callout-gold&quot;&gt;
+&lt;h3&gt;Gold callout&lt;/h3&gt;
+&lt;p&gt;A short message, a requirement summary, or a next step.&lt;/p&gt;
+&lt;/aside&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Bronze callout</h3><p><code>.callout .callout-bronze</code></p></div>
+<div class="sg-specimen">
+<aside class="callout callout-bronze">
+<h3>Bronze callout</h3>
+<p>A short message, a requirement summary, or a next step.</p>
+</aside>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;aside class=&quot;callout callout-bronze&quot;&gt;
+&lt;h3&gt;Bronze callout&lt;/h3&gt;
+&lt;p&gt;A short message, a requirement summary, or a next step.&lt;/p&gt;
+&lt;/aside&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Purple callout</h3><p><code>.callout .callout-purple</code></p></div>
+<div class="sg-specimen">
+<aside class="callout callout-purple">
+<h3>Purple callout</h3>
+<p>A short message, a requirement summary, or a next step.</p>
+</aside>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;aside class=&quot;callout callout-purple&quot;&gt;
+&lt;h3&gt;Purple callout&lt;/h3&gt;
+&lt;p&gt;A short message, a requirement summary, or a next step.&lt;/p&gt;
+&lt;/aside&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Brown callout</h3><p><code>.callout .callout-brown</code></p></div>
+<div class="sg-specimen">
+<aside class="callout callout-brown">
+<h3>Brown callout</h3>
+<p>A short message, a requirement summary, or a next step.</p>
+</aside>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;aside class=&quot;callout callout-brown&quot;&gt;
+&lt;h3&gt;Brown callout&lt;/h3&gt;
+&lt;p&gt;A short message, a requirement summary, or a next step.&lt;/p&gt;
+&lt;/aside&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Pink callout</h3><p><code>.callout .callout-pink</code></p></div>
+<div class="sg-specimen">
+<aside class="callout callout-pink">
+<h3>Pink callout</h3>
+<p>A short message, a requirement summary, or a next step.</p>
+</aside>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;aside class=&quot;callout callout-pink&quot;&gt;
+&lt;h3&gt;Pink callout&lt;/h3&gt;
+&lt;p&gt;A short message, a requirement summary, or a next step.&lt;/p&gt;
+&lt;/aside&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Gold mini callout</h3><p><code>.mini-callout .mini-callout-gold</code></p></div>
+<div class="sg-specimen">
+{% from "components/mini-callout.njk" import miniCallout %}
+{% call miniCallout("emoji-smile", "gold") %}
+<p>A short message with an optional <a href="#callouts">link</a>.</p>
+{% endcall %}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/mini-callout.njk&quot; import miniCallout %}
+{% call miniCallout(&quot;emoji-smile&quot;, &quot;gold&quot;) %}
+&lt;p&gt;A short message with an optional &lt;a href=&quot;#callouts&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+{% endcall %}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Blue mini callout</h3><p><code>.mini-callout .mini-callout-blue</code></p></div>
+<div class="sg-specimen">
+{% from "components/mini-callout.njk" import miniCallout %}
+{% call miniCallout("emoji-smile", "blue") %}
+<p>A short message with an optional <a href="#callouts">link</a>.</p>
+{% endcall %}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/mini-callout.njk&quot; import miniCallout %}
+{% call miniCallout(&quot;emoji-smile&quot;, &quot;blue&quot;) %}
+&lt;p&gt;A short message with an optional &lt;a href=&quot;#callouts&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+{% endcall %}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Teal mini callout</h3><p><code>.mini-callout .mini-callout-teal</code></p></div>
+<div class="sg-specimen">
+{% from "components/mini-callout.njk" import miniCallout %}
+{% call miniCallout("emoji-smile", "teal") %}
+<p>A short message with an optional <a href="#callouts">link</a>.</p>
+{% endcall %}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/mini-callout.njk&quot; import miniCallout %}
+{% call miniCallout(&quot;emoji-smile&quot;, &quot;teal&quot;) %}
+&lt;p&gt;A short message with an optional &lt;a href=&quot;#callouts&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+{% endcall %}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Purple mini callout</h3><p><code>.mini-callout .mini-callout-purple</code></p></div>
+<div class="sg-specimen">
+{% from "components/mini-callout.njk" import miniCallout %}
+{% call miniCallout("emoji-smile", "purple") %}
+<p>A short message with an optional <a href="#callouts">link</a>.</p>
+{% endcall %}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/mini-callout.njk&quot; import miniCallout %}
+{% call miniCallout(&quot;emoji-smile&quot;, &quot;purple&quot;) %}
+&lt;p&gt;A short message with an optional &lt;a href=&quot;#callouts&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+{% endcall %}{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="tiles" aria-labelledby="tiles-heading"><h2 id="tiles-heading">Tiles</h2><p>Color, layout, and finish are separate. Pair .tile with a color and a content layout such as .icon-tile, .date-tile, or .program-tile. A bare tile does not set a square size by itself.</p>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Green icon tile</h3><p><code>.tile .tile-green .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-green icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Green tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-green icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Green tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Teal icon tile</h3><p><code>.tile .tile-teal .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-teal icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Teal tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-teal icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Teal tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Blue icon tile</h3><p><code>.tile .tile-blue .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-blue icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Blue tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-blue icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Blue tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Purple icon tile</h3><p><code>.tile .tile-purple .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-purple icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Purple tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-purple icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Purple tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Bronze icon tile</h3><p><code>.tile .tile-bronze .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-bronze icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Bronze tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-bronze icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Bronze tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Brown icon tile</h3><p><code>.tile .tile-brown .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-brown icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Brown tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-brown icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Brown tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Pink icon tile</h3><p><code>.tile .tile-pink .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-pink icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Pink tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-pink icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Pink tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Gold icon tile</h3><p><code>.tile .tile-gold .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-gold icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Gold tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-gold icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Gold tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Black icon tile</h3><p><code>.tile .tile-black .icon-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-black icon-tile">{% include "icons/compass.svg" %}</div>
+<div class="media-content"><p>Black tile with a shared frame, shadow, and contour treatment.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-black icon-tile&quot;&gt;{% include &quot;icons/compass.svg&quot; %}&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Black tile with a shared frame, shadow, and contour treatment.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Degree Tile</h3><p><code>.tile .degree-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-purple degree-tile">
+<span>MA</span>
+<span>Sample degree</span>
+</div>
+<div class="media-content"><p>Sample degree tile.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-purple degree-tile&quot;&gt;
+&lt;span&gt;MA&lt;/span&gt;
+&lt;span&gt;Sample degree&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Sample degree tile.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Date Tile</h3><p><code>.tile .date-tile</code></p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-purple date-tile">
+<span>JAN</span>
+<strong>15</strong>
+<span>Sample date</span>
+</div>
+<div class="media-content"><p>Sample date tile.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-purple date-tile&quot;&gt;
+&lt;span&gt;JAN&lt;/span&gt;
+&lt;strong&gt;15&lt;/strong&gt;
+&lt;span&gt;Sample date&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Sample date tile.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Funding Tile</h3><p><code>.tile .funding-tile</code></p><p>Current behavior: Funding Sources text centering is still a pending refinement. This guide shows the existing rule honestly.</p></div>
+<div class="sg-specimen">
+<div class="media-row media-row-medium">
+<div class="media-visual tile tile-purple funding-tile">
+<h2>Sample funding</h2>
+</div>
+<div class="media-content"><p>Sample funding tile.</p></div>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;media-row media-row-medium&quot;&gt;
+&lt;div class=&quot;media-visual tile tile-purple funding-tile&quot;&gt;
+&lt;h2&gt;Sample funding&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div class=&quot;media-content&quot;&gt;&lt;p&gt;Sample funding tile.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Navigation tiles in a five-column grid</h3><p><code>.grid-five · .program-tile · .tile</code></p></div>
+<div class="sg-specimen">
+<div class="grid-five">
+<a class="program-tile tile tile-bronze" href="#tiles"><span class="program-tile-title">One</span><span class="program-tile-label">Example</span></a>
+<a class="program-tile tile tile-purple" href="#tiles"><span class="program-tile-title">Two</span><span class="program-tile-label">Example</span></a>
+<a class="program-tile tile tile-teal" href="#tiles"><span class="program-tile-title">Three</span><span class="program-tile-label">Example</span></a>
+<a class="program-tile tile tile-blue" href="#tiles"><span class="program-tile-title">Four</span><span class="program-tile-label">Example</span></a>
+<a class="program-tile tile tile-brown" href="#tiles"><span class="program-tile-title">Five</span><span class="program-tile-label">Example</span></a>
+</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;div class=&quot;grid-five&quot;&gt;
+&lt;a class=&quot;program-tile tile tile-bronze&quot; href=&quot;#tiles&quot;&gt;&lt;span class=&quot;program-tile-title&quot;&gt;One&lt;/span&gt;&lt;span class=&quot;program-tile-label&quot;&gt;Example&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;program-tile tile tile-purple&quot; href=&quot;#tiles&quot;&gt;&lt;span class=&quot;program-tile-title&quot;&gt;Two&lt;/span&gt;&lt;span class=&quot;program-tile-label&quot;&gt;Example&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;program-tile tile tile-teal&quot; href=&quot;#tiles&quot;&gt;&lt;span class=&quot;program-tile-title&quot;&gt;Three&lt;/span&gt;&lt;span class=&quot;program-tile-label&quot;&gt;Example&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;program-tile tile tile-blue&quot; href=&quot;#tiles&quot;&gt;&lt;span class=&quot;program-tile-title&quot;&gt;Four&lt;/span&gt;&lt;span class=&quot;program-tile-label&quot;&gt;Example&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;program-tile tile tile-brown&quot; href=&quot;#tiles&quot;&gt;&lt;span class=&quot;program-tile-title&quot;&gt;Five&lt;/span&gt;&lt;span class=&quot;program-tile-label&quot;&gt;Example&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="frames" aria-labelledby="frames-heading"><h2 id="frames-heading">Photo frames</h2>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Small photo mat</h3><p><code>.photo-frame .photo-frame-small</code></p><p>Mat sizes are 3px, 6px, and 9px. These are independent of the media column sizes. The guide limits each displayed image to 212px.</p></div>
+<div class="sg-specimen">
+<img class="sg-frame-preview photo-frame photo-frame-small" src="{{ '/_media/examples/sample-photo.svg' | url }}" alt="Sample portrait illustration" width="400" height="400" loading="lazy">
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;img class=&quot;photo-frame photo-frame-small&quot; src=&quot;{{ &#x27;/_media/examples/sample-photo.svg&#x27; | url }}&quot; alt=&quot;Sample portrait illustration&quot; width=&quot;400&quot; height=&quot;400&quot; loading=&quot;lazy&quot;&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Medium photo mat</h3><p><code>.photo-frame .photo-frame-medium</code></p><p>Mat sizes are 3px, 6px, and 9px. These are independent of the media column sizes. The guide limits each displayed image to 212px.</p></div>
+<div class="sg-specimen">
+<img class="sg-frame-preview photo-frame photo-frame-medium" src="{{ '/_media/examples/sample-photo.svg' | url }}" alt="Sample portrait illustration" width="400" height="400" loading="lazy">
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;img class=&quot;photo-frame photo-frame-medium&quot; src=&quot;{{ &#x27;/_media/examples/sample-photo.svg&#x27; | url }}&quot; alt=&quot;Sample portrait illustration&quot; width=&quot;400&quot; height=&quot;400&quot; loading=&quot;lazy&quot;&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Large photo mat</h3><p><code>.photo-frame .photo-frame-large</code></p><p>Mat sizes are 3px, 6px, and 9px. These are independent of the media column sizes. The guide limits each displayed image to 212px.</p></div>
+<div class="sg-specimen">
+<img class="sg-frame-preview photo-frame photo-frame-large" src="{{ '/_media/examples/sample-photo.svg' | url }}" alt="Sample portrait illustration" width="400" height="400" loading="lazy">
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;img class=&quot;photo-frame photo-frame-large&quot; src=&quot;{{ &#x27;/_media/examples/sample-photo.svg&#x27; | url }}&quot; alt=&quot;Sample portrait illustration&quot; width=&quot;400&quot; height=&quot;400&quot; loading=&quot;lazy&quot;&gt;{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="profiles" aria-labelledby="profiles-heading"><h2 id="profiles-heading">Faculty profiles</h2>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Directory card with optional fields</h3><p><code>components/profile-card.njk · components/profile-identity.njk · components/profile-contact.njk</code></p><p>Names and contact details here are fictional examples. The minimal card demonstrates omitted photo, office, email, phone, and research fields.</p></div>
+<div class="sg-specimen">
+<div class="sg-profile-grid">{% set person = {
+"slug": "sample-person",
+"name": "Sample Faculty Member",
+"title": "Sample faculty title",
+"role": "Sample administrative role",
+"office": "Sample office",
+"email": "faculty@example.invalid",
+"phone": "1 (808) 555-0100",
+"photo": "/_media/examples/sample-photo.svg",
+"url": "/#profiles",
+"keywords": ["Sample research interest", "Another interest"]
+} %}
+{% include "components/profile-card.njk" %}{% set person = {"slug": "minimal-person", "name": "Minimal Faculty Example", "title": "Sample faculty title", "url": "/#profiles"} %}
+{% include "components/profile-card.njk" %}</div>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% set person = {
+&quot;slug&quot;: &quot;sample-person&quot;,
+&quot;name&quot;: &quot;Sample Faculty Member&quot;,
+&quot;title&quot;: &quot;Sample faculty title&quot;,
+&quot;role&quot;: &quot;Sample administrative role&quot;,
+&quot;office&quot;: &quot;Sample office&quot;,
+&quot;email&quot;: &quot;faculty@example.invalid&quot;,
+&quot;phone&quot;: &quot;1 (808) 555-0100&quot;,
+&quot;photo&quot;: &quot;/_media/examples/sample-photo.svg&quot;,
+&quot;url&quot;: &quot;/#profiles&quot;,
+&quot;keywords&quot;: [&quot;Sample research interest&quot;, &quot;Another interest&quot;]
+} %}
+{% include &quot;components/profile-card.njk&quot; %}
+
+{% set person = {&quot;slug&quot;: &quot;minimal-person&quot;, &quot;name&quot;: &quot;Minimal Faculty Example&quot;, &quot;title&quot;: &quot;Sample faculty title&quot;, &quot;url&quot;: &quot;/#profiles&quot;} %}
+{% include &quot;components/profile-card.njk&quot; %}{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="advising" aria-labelledby="advising-heading"><h2 id="advising-heading">Advising</h2>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Two advising contacts</h3><p><code>components/undergraduate-advisors.njk</code></p><p>The include reads local JSON. Its current name reflects GEO’s original use; the layout itself is shared. It includes medium dividers above and below.</p></div>
+<div class="sg-specimen">
+{% include "components/undergraduate-advisors.njk" %}
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% include &quot;components/undergraduate-advisors.njk&quot; %}
+
+/* Content: src/_data/advising.json */
+{
+&quot;heading&quot;: &quot;Advising Example&quot;,
+&quot;intro&quot;: &quot;Fictional examples show optional photos, titles, names, links, and email fields.&quot;,
+&quot;people&quot;: [
+{
+&quot;title&quot;: &quot;Program Advisor&quot;,
+&quot;name&quot;: &quot;Sample Advisor One&quot;,
+&quot;photo&quot;: &quot;/_media/examples/sample-photo.svg&quot;,
+&quot;email&quot;: &quot;advisor-one@example.invalid&quot;
+},
+{
+&quot;title&quot;: &quot;General Education Advisor&quot;,
+&quot;name&quot;: &quot;Sample Advisor Two&quot;,
+&quot;photo&quot;: &quot;/_media/examples/sample-photo.svg&quot;,
+&quot;email&quot;: &quot;advisor-two@example.invalid&quot;
+}
+]
+}{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="bluesky" aria-labelledby="bluesky-heading"><h2 id="bluesky-heading">Optional Bluesky feed</h2><p>The card redesign remains separate from documenting the component. These examples do not connect to a real account.</p>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Current card appearance</h3><p><code>.news-post · .news-post-header · .news-post-text</code></p></div>
+<div class="sg-specimen">
+<article class="news-post">
+<header class="news-post-header"><p class="news-post-author">Sample department</p><p class="news-post-date">Demonstration post</p></header>
+<p class="news-post-text">A fictional post demonstrates the current shared Bluesky card styling. This example makes no feed request.</p>
+<p class="news-post-footer">Sample card only</p>
+</article>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;article class=&quot;news-post&quot;&gt;
+&lt;header class=&quot;news-post-header&quot;&gt;&lt;p class=&quot;news-post-author&quot;&gt;Sample department&lt;/p&gt;&lt;p class=&quot;news-post-date&quot;&gt;Demonstration post&lt;/p&gt;&lt;/header&gt;
+&lt;p class=&quot;news-post-text&quot;&gt;A fictional post demonstrates the current shared Bluesky card styling. This example makes no feed request.&lt;/p&gt;
+&lt;p class=&quot;news-post-footer&quot;&gt;Sample card only&lt;/p&gt;
+&lt;/article&gt;{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Feed setup</h3><p><code>components/bluesky-feed.njk · assets/bluesky-feed.js</code></p></div>
+<div class="sg-specimen">
+<p>The feed stays disabled in this reference. Enabling the shared include loads the feed script only on the page that uses it.</p>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}/* In src/_data/site.json */
+&quot;bluesky&quot;: {
+&quot;enabled&quot;: true,
+&quot;actor&quot;: &quot;YOUR-HANDLE.bsky.social&quot;,
+&quot;limit&quot;: 12,
+&quot;url&quot;: &quot;https://bsky.app/profile/YOUR-HANDLE.bsky.social&quot;,
+&quot;label&quot;: &quot;Department on Bluesky&quot;
+}
+
+/* In the page template */
+{% include &quot;components/bluesky-feed.njk&quot; %}{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="icons" aria-labelledby="icons-heading"><h2 id="icons-heading">Icons</h2><p>These inline SVG includes are maintained in css-shared/src/_includes/icons/. For a decorative icon beside visible text, wrap it in a span with aria-hidden="true".</p><article class="sg-entry"><div class="sg-entry-meta"><h3>Shared icon collection</h3><p><code>icons/*.svg</code></p></div><div class="sg-specimen"><div class="sg-icon-list"><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/award.svg" %}</span><code>award.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/bluesky.svg" %}</span><code>bluesky.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/book.svg" %}</span><code>book.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/calendar3.svg" %}</span><code>calendar3.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/cash-coin.svg" %}</span><code>cash-coin.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/compass.svg" %}</span><code>compass.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/emoji-smile.svg" %}</span><code>emoji-smile.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/envelope.svg" %}</span><code>envelope.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/globe-americas.svg" %}</span><code>globe-americas.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/journal.svg" %}</span><code>journal.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/journal-richtext.svg" %}</span><code>journal-richtext.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/layers.svg" %}</span><code>layers.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/leaf.svg" %}</span><code>leaf.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/list.svg" %}</span><code>list.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/map.svg" %}</span><code>map.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/mic.svg" %}</span><code>mic.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/mortarboard.svg" %}</span><code>mortarboard.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/newspaper.svg" %}</span><code>newspaper.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/people.svg" %}</span><code>people.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/search.svg" %}</span><code>search.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/signpost.svg" %}</span><code>signpost.svg</code></div><div class="sg-icon-item"><span aria-hidden="true">{% include "icons/telephone.svg" %}</span><code>telephone.svg</code></div></div></div><details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% include &quot;icons/award.svg&quot; %}
+{% include &quot;icons/bluesky.svg&quot; %}
+{% include &quot;icons/book.svg&quot; %}
+{% include &quot;icons/calendar3.svg&quot; %}
+{% include &quot;icons/cash-coin.svg&quot; %}
+{% include &quot;icons/compass.svg&quot; %}
+{% include &quot;icons/emoji-smile.svg&quot; %}
+{% include &quot;icons/envelope.svg&quot; %}
+{% include &quot;icons/globe-americas.svg&quot; %}
+{% include &quot;icons/journal.svg&quot; %}
+{% include &quot;icons/journal-richtext.svg&quot; %}
+{% include &quot;icons/layers.svg&quot; %}
+{% include &quot;icons/leaf.svg&quot; %}
+{% include &quot;icons/list.svg&quot; %}
+{% include &quot;icons/map.svg&quot; %}
+{% include &quot;icons/mic.svg&quot; %}
+{% include &quot;icons/mortarboard.svg&quot; %}
+{% include &quot;icons/newspaper.svg&quot; %}
+{% include &quot;icons/people.svg&quot; %}
+{% include &quot;icons/search.svg&quot; %}
+{% include &quot;icons/signpost.svg&quot; %}
+{% include &quot;icons/telephone.svg&quot; %}{% endraw %}</code></pre></div></details></article></section><section class="sg-section" id="graphics" aria-labelledby="graphics-heading"><h2 id="graphics-heading">Shared graphics</h2><p>University branding, patterns, and footer backgrounds remain shared. Department logos and photography belong to their local sites. Contour lines are demonstrated on the colored tiles above.</p><article class="sg-entry"><div class="sg-entry-meta"><h3>University logo, patterns, and watermarks</h3><p><code>/_media/branding/ · /_media/other/contour-lines.svg</code></p></div><div class="sg-specimen"><div class="sg-swatch-grid"><div><div class="sg-asset-panel" style="background-color:#e8edf2;background-image:url('{{ ('/_media/branding/uh-pattern-horz-black.svg') | url }}');"></div><p class="text-note"><code>uh-pattern-horz-black.svg</code></p></div><div><div class="sg-asset-panel" style="background-color:#354d67;background-image:url('{{ ('/_media/branding/uh-pattern-horz-white.svg') | url }}');"></div><p class="text-note"><code>uh-pattern-horz-white.svg</code></p></div><div><div class="sg-asset-panel" style="background-color:#e8edf2;background-image:url('{{ ('/_media/branding/uh-pattern-vert-5-black.svg') | url }}');"></div><p class="text-note"><code>uh-pattern-vert-5-black.svg</code></p></div><div><div class="sg-asset-panel" style="background-color:#354d67;background-image:url('{{ ('/_media/branding/uh-pattern-vert-5-white.svg') | url }}');"></div><p class="text-note"><code>uh-pattern-vert-5-white.svg</code></p></div><div><div class="sg-asset-panel" style="background-color:#354d67;background-image:url('{{ ('/_media/branding/footer-watermark-desktop.png') | url }}');"></div><p class="text-note"><code>footer-watermark-desktop.png</code></p></div><div><div class="sg-asset-panel" style="background-color:#354d67;background-image:url('{{ ('/_media/branding/footer-watermark-mobile.png') | url }}');"></div><p class="text-note"><code>footer-watermark-mobile.png</code></p></div></div><div class="sg-dark"><img src="{{ '/_media/branding/uh-manoa-logo-white.svg' | url }}" alt="University of Hawaiʻi at Mānoa white logo" width="248" height="87"></div></div><details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;img src=&quot;{{ &#x27;/_media/branding/uh-manoa-logo-white.svg&#x27; | url }}&quot; alt=&quot;University of Hawaiʻi at Mānoa&quot; width=&quot;248&quot; height=&quot;87&quot;&gt;
+
+/* Shared backgrounds */
+/_media/branding/uh-pattern-horz-black.svg
+/_media/branding/uh-pattern-horz-white.svg
+/_media/branding/uh-pattern-vert-5-black.svg
+/_media/branding/uh-pattern-vert-5-white.svg
+/_media/branding/footer-watermark-desktop.png
+/_media/branding/footer-watermark-mobile.png
+/_media/other/contour-lines.svg{% endraw %}</code></pre></div></details></article></section><section class="sg-section" id="ownership" aria-labelledby="ownership-heading"><h2 id="ownership-heading">Where to edit</h2>
+<div class="sg-table-wrap"><table class="sg-table"><caption>Where maintained source files live</caption><thead><tr><th scope="col">Change</th><th scope="col">Edit location</th><th scope="col">Purpose</th></tr></thead><tbody><tr><th scope="row">Shared shell</th><td><code>css-shared/src/shell.css</code></td><td>UH bar, unit bar, navigation, search, and footer styling.</td></tr><tr><th scope="row">Shared components</th><td><code>css-shared/src/common.css</code></td><td>Typography, palette, layout, components, spacing, and hero dimensions.</td></tr><tr><th scope="row">Shared includes</th><td><code>css-shared/src/_includes/components/</code></td><td>Reusable markup and macros.</td></tr><tr><th scope="row">Unit settings</th><td><code>UNIT/src/_data/site.json</code></td><td>Name, search scope, logo, address, phone, email, social links.</td></tr><tr><th scope="row">Unit navigation</th><td><code>UNIT/src/_data/navigation.json</code></td><td>Navigation labels and destinations.</td></tr><tr><th scope="row">Hero content</th><td><code>UNIT/src/_data/heroes.json</code></td><td>Images, locations, crops, credits. Some appearance settings are still local in the current version.</td></tr><tr><th scope="row">Local photos</th><td><code>UNIT/src/_media/heros/</code></td><td>Department hero image files. The current folder spelling is heros.</td></tr><tr><th scope="row">Local overrides</th><td><code>geo/src/geo.css · soc/src/soc.css</code></td><td>Styles belonging only to a department.</td></tr><tr><th scope="row">Guide-only presentation</th><td><code>style-guide/src/style-guide.css</code></td><td>Example borders, labels, code panels, and reference layout.</td></tr><tr><th scope="row">Shared connection</th><td><code>UNIT/shared.config.json</code></td><td>Shared repository, branch, and local folder path.</td></tr></tbody></table></div><h3>Working safely</h3><ol><li>Edit local source in VS Code and preview the complete site.</li><li>To test shared changes without releasing them, create a preview branch of css-shared. Keep production sites configured to main.</li><li>Point the guide build at the preview branch using shared.config.json. Its local preview uses the checked-out local shared folder; its online build uses the configured ref.</li><li>After review, merge approved shared changes to main. Connected sites receive them when they rebuild.</li></ol><p class="text-note">A local shared checkout on a preview branch affects every local preview using that folder. Published sites remain on their configured GitHub branch. Use a separate local shared checkout for simultaneous stable and preview work.</p></section>
+</div>
+<script src="{{ '/assets/style-guide.js' | url }}" defer></script>

@@ -1,0 +1,127 @@
+---
+layout: layouts/base.njk
+title: "Site Shell"
+hidePageTitle: true
+permalink: "/shell/"
+description: "Reference for the shared UH bar, department identity, navigation, search, hero, footer and language services."
+---
+<div class="sg-shell-reference"><div class="page-header"><h1>Site Shell</h1><p class="intro-highlight">One structure. Local department details.</p><p class="page-intro">The header, navigation, hero, and footer surrounding this page are the real shared components. Change the viewport width to inspect their responsive behavior.</p></div>
+<nav class="sg-index" aria-label="Shell examples"><a href="#shell-header">Header</a><a href="#shell-navigation">Navigation</a><a href="#shell-hero">Hero</a><a href="#shell-footer">Footer</a><a href="#shell-data">Unit settings</a></nav><section class="sg-section" id="shell-header" aria-labelledby="shell-header-heading"><h2 id="shell-header-heading">UH bar and unit identity</h2>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>University bar</h3><p><code>components/uh-brand.njk · shell.css</code></p></div>
+<div class="sg-specimen">
+<p>The green university bar at the top uses shared university branding and links. Department settings do not replace it.</p>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% include &quot;components/uh-brand.njk&quot; %}{% endraw %}</code></pre></div></details>
+</article>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Unit name and search</h3><p><code>components/unit-name.njk · site.name · site.shortName · site.search</code></p></div>
+<div class="sg-specimen">
+<p>The unit name and search above read local settings. Desktop and mobile search share the same department scope.</p>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{
+&quot;name&quot;: &quot;CSS Website Style Guide&quot;,
+&quot;shortName&quot;: &quot;CSS&quot;,
+&quot;search&quot;: {
+&quot;domain&quot;: &quot;cssweb-stack.github.io/style-guide/&quot;,
+&quot;label&quot;: &quot;CSS Style Guide&quot;
+}
+}{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="shell-navigation" aria-labelledby="shell-navigation-heading"><h2 id="shell-navigation-heading">Navigation</h2>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Dropdowns and direct links</h3><p><code>components/unit-nav.njk · navigation.json</code></p></div>
+<div class="sg-specimen">
+<p>Use “Browse components” above to test a real dropdown. A department supplies its own labels, order, child items, and URLs through JSON.</p>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}[
+{
+&quot;label&quot;: &quot;Home&quot;,
+&quot;url&quot;: &quot;/&quot;
+},
+{
+&quot;label&quot;: &quot;About SOC&quot;,
+&quot;children&quot;: [
+{
+&quot;label&quot;: &quot;Why Study SOC&quot;,
+&quot;url&quot;: &quot;/about-soc/why-study-soc.html&quot;,
+&quot;icon&quot;: &quot;compass&quot;
+}
+]
+}
+]{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="shell-hero" aria-labelledby="shell-hero-heading"><h2 id="shell-hero-heading">Hero and attribution</h2>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Shared hero component</h3><p><code>components/hero.njk · common.css</code></p><p>Current boundary: CSS and markup are shared; hero JSON still includes appearance defaults and section settings. Moving those remaining appearance settings centrally is a future refinement, not something this guide silently changes.</p></div>
+<div class="sg-specimen">
+<p>The hero above uses a department-owned photograph with the shared height, layout, and label styling. Its source credit appears immediately above the footer.</p>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% include &quot;components/hero.njk&quot; %}
+{% include &quot;components/hero-attribution.njk&quot; %}{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="shell-footer" aria-labelledby="shell-footer-heading"><h2 id="shell-footer-heading">Footer and language services</h2>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>Department information and university links</h3><p><code>components/footer.njk · components/subfooter.njk · university.json</code></p><p>The webmaster link remains cssweb@hawaii.edu. No department address or social account is invented for this guide.</p></div>
+<div class="sg-specimen">
+<p>The footer below is the actual shared footer. Its optional contact fields are omitted for this guide. GEO and SOC supply their own logos, contact details, and social links. University links and language services stay shared.</p>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% include &quot;components/footer.njk&quot; %}{% endraw %}</code></pre></div></details>
+</article>
+</section>
+<section class="sg-section" id="shell-data" aria-labelledby="shell-data-heading"><h2 id="shell-data-heading">Unit settings</h2>
+<article class="sg-entry">
+<div class="sg-entry-meta"><h3>SOC configuration example</h3><p><code>UNIT/src/_data/site.json</code></p></div>
+<div class="sg-specimen">
+<p>A local JSON record changes department identity without editing shared templates.</p>
+</div>
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{
+&quot;name&quot;: &quot;Department of Sociology&quot;,
+&quot;shortName&quot;: &quot;SOC&quot;,
+&quot;prefix&quot;: &quot;Department of&quot;,
+&quot;logo&quot;: {
+&quot;src&quot;: &quot;/_media/unit/soc-logo-white.svg&quot;,
+&quot;alt&quot;: &quot;Department of Sociology, University of Hawaiʻi at Mānoa&quot;,
+&quot;width&quot;: 500,
+&quot;height&quot;: 310
+},
+&quot;address&quot;: [
+&quot;2424 Maile Way&quot;,
+&quot;Saunders Hall 247&quot;,
+&quot;Honolulu, HI 96822&quot;
+],
+&quot;phone&quot;: {
+&quot;label&quot;: &quot;1 (808) 956-7693&quot;,
+&quot;href&quot;: &quot;tel:+18089567693&quot;
+},
+&quot;email&quot;: {
+&quot;label&quot;: &quot;socdept@hawaii.edu&quot;,
+&quot;href&quot;: &quot;mailto:socdept@hawaii.edu&quot;,
+&quot;contactHref&quot;: &quot;mailto:socdept@hawaii.edu&quot;
+},
+&quot;socialLinks&quot;: [
+{
+&quot;label&quot;: &quot;X (Twitter)&quot;,
+&quot;url&quot;: &quot;https://twitter.com/UHM_Sociology&quot;
+}
+],
+&quot;privacy&quot;: {
+&quot;label&quot;: &quot;Department Privacy Policy&quot;,
+&quot;url&quot;: &quot;/privacy/&quot;
+},
+&quot;webmaster&quot;: {
+&quot;label&quot;: &quot;Department Webmaster&quot;,
+&quot;email&quot;: &quot;cssweb@hawaii.edu&quot;
+},
+&quot;search&quot;: {
+&quot;domain&quot;: &quot;cssweb-stack.github.io/soc/&quot;,
+&quot;label&quot;: &quot;SOC&quot;
+}
+}{% endraw %}</code></pre></div></details>
+</article>
+</section>
+</div>
+<script src="{{ '/assets/style-guide.js' | url }}" defer></script>

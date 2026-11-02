@@ -1,0 +1,83 @@
+[
+  {
+    "label": "Components",
+    "url": "/"
+  },
+  {
+    "label": "Browse components",
+    "children": [
+      {
+        "label": "Colors",
+        "url": "/#palette"
+      },
+      {
+        "label": "Typography",
+        "url": "/#typography"
+      },
+      {
+        "label": "Lists",
+        "url": "/#lists"
+      },
+      {
+        "label": "Media rows",
+        "url": "/#media-rows"
+      },
+      {
+        "label": "Grids",
+        "url": "/#grids"
+      },
+      {
+        "label": "Dividers and spacing",
+        "url": "/#dividers"
+      },
+      {
+        "label": "Buttons",
+        "url": "/#buttons"
+      },
+      {
+        "label": "Callouts",
+        "url": "/#callouts"
+      },
+      {
+        "label": "Tiles",
+        "url": "/#tiles"
+      },
+      {
+        "label": "Photo frames",
+        "url": "/#frames"
+      },
+      {
+        "label": "Faculty profiles",
+        "url": "/#profiles"
+      },
+      {
+        "label": "Advising",
+        "url": "/#advising"
+      },
+      {
+        "label": "Bluesky",
+        "url": "/#bluesky"
+      },
+      {
+        "label": "Icons",
+        "url": "/#icons"
+      },
+      {
+        "label": "Shared graphics",
+        "url": "/#graphics"
+      },
+      {
+        "label": "Where to edit",
+        "url": "/#ownership"
+      }
+    ]
+  },
+  {
+    "label": "Site shell",
+    "url": "/shell/"
+  },
+  {
+    "label": "Where to edit",
+    "url": "/#ownership"
+  }
+]
