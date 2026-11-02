@@ -1,10 +1,17 @@
+/* Guide-only presentation palette. Shared site colors remain in common.css. */
+:root {
+--sg-border: #dbe2e8;
+--sg-surface: #f5f7fa;
+--sg-index-border: #cbd5df;
+--sg-code-surface: #f3f5f8;
+--sg-code-text: #253548;
+--sg-demo-border: #a0afbf;
+--sg-demo-surface: #fafbfd;
+--sg-demo-muted-surface: #edf2f7;
+}
 /* Guide presentation only. Shared styles are never redefined here.
 Compatibility: the shared base template requests geo.css; Eleventy maps this
 local source to that output filename. */
-.sg-reference, .sg-shell-reference {
---sg-border: #dbe2e8;
---sg-surface: #f5f7fa;
-}
 .sg-index {
 display: flex;
 flex-wrap: wrap;
@@ -16,10 +23,10 @@ display: inline-flex;
 align-items: center;
 min-height: 44px;
 padding: .5rem .875rem;
-border: 1px solid #cbd5df;
+border: 1px solid var(--sg-index-border);
 border-radius: 999px;
 text-decoration: none;
-background: #fff;
+background: var(--light);
 }
 .sg-section {
 scroll-margin-top: 18rem;
@@ -66,8 +73,8 @@ padding: 0 1.25rem 1.25rem;
 .sg-code pre, .sg-preview-code {
 margin: .75rem 0 0;
 padding: 1rem;
-background: #f3f5f8;
-color: #253548;
+background: var(--sg-code-surface);
+color: var(--sg-code-text);
 border-radius: .25rem;
 white-space: pre-wrap;
 overflow-wrap: anywhere;
@@ -77,10 +84,10 @@ line-height: 1.6;
 .sg-copy {
 min-height: 44px;
 padding: .5rem .875rem;
-border: 1px solid #354d67;
+border: 1px solid var(--color-blue);
 border-radius: .25rem;
-background: #fff;
-color: #354d67;
+background: var(--light);
+color: var(--color-blue);
 font: inherit;
 font-size: .875rem;
 cursor: pointer;
@@ -117,23 +124,23 @@ margin: 0;
 font-size: .875rem;
 }
 .sg-rule-demo {
-border-inline: 1px dashed #a0afbf;
-background: #fafbfd;
+border-inline: 1px dashed var(--sg-demo-border);
+background: var(--sg-demo-surface);
 }
 .sg-space-demo {
-background: #edf2f7;
-border-block: 1px dashed #a0afbf;
+background: var(--sg-demo-muted-surface);
+border-block: 1px dashed var(--sg-demo-border);
 }
 .sg-dark {
 padding: 1rem;
-background: #354d67;
-color: #fff;
+background: var(--color-blue);
+color: var(--light);
 }
 .sg-grid-cell {
 min-height: 5rem;
 padding: 1rem;
-background: #edf2f7;
-border: 1px dashed #a0afbf;
+background: var(--sg-demo-muted-surface);
+border: 1px dashed var(--sg-demo-border);
 }
 .sg-table-wrap {
 overflow-x: auto;
@@ -157,7 +164,7 @@ display: block;
 width: 100%;
 height: 920px;
 border: 1px solid var(--sg-border);
-background: white;
+background: var(--light);
 }
 .sg-icon-list {
 display: grid;
@@ -181,7 +188,7 @@ gap: 2rem;
 }
 .sg-label {
 font-size: .875rem;
-color: #555;
+color: var(--note-color);
 }
 @media (max-width: 575.98px) {
 .sg-specimen {
@@ -197,7 +204,7 @@ height: 1130px;
 
 .sg-asset-panel {
 height: 130px;
-border: 1px solid #cbd5df;
+border: 1px solid var(--sg-index-border);
 border-radius: .25rem;
 background-size: cover;
 background-position: center;
@@ -215,9 +222,9 @@ gap: 1.25rem;
 }
 .sg-directory-card {
 padding: 1.5rem;
-border: 1px solid #dbe2e8;
+border: 1px solid var(--sg-border);
 border-radius: .5rem;
-background: #f5f7fa;
+background: var(--sg-surface);
 }
 .site-main .sg-directory-card h2 {
 font-size: 1.25rem;
@@ -226,7 +233,7 @@ margin: 0 0 .75rem;
 .sg-related {
 margin-block: 2rem;
 padding-top: 1.25rem;
-border-top: 1px solid #dbe2e8;
+border-top: 1px solid var(--sg-border);
 }
 .sg-related ul {
 display: flex;
