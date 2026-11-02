@@ -3,147 +3,147 @@ layout: layouts/base.njk
 title: Colors
 hidePageTitle: true
 permalink: /colors/
-description: Institutional colors, grays, primary and secondary accents, and a complete CSS color inventory for the shared college website system.
+description: Base colors, primary and secondary accents, and grays for the shared college website system.
 ---
 <div class="sg-reference">
-<div class="page-header">
 <h1>Colors</h1>
-<p class="intro-highlight">Institutional colors, grays, and accents.</p>
-<p class="page-intro">Keep the shared foundation distinct from the accent palette. Choose a color by its role, then use the matching component variant.</p>
-</div>
-<nav class="sg-index" aria-label="Color groups">
-<a href="#institutional">Institutional Colors</a>
-<a href="#grays">Grays</a>
-<a href="#accents">Accent Colors</a>
-<a href="#color-audit">Complete CSS Inventory</a>
-</nav>
+{% include "components/divider-large.njk" %}
 <div id="palette">
-<section class="sg-color-group" id="institutional" aria-labelledby="institutional-heading">
-<h2 id="institutional-heading">Institutional Colors</h2>
-<p>Brand and functional colors used in the shared site foundation. UH Green retains its university-specific name.</p>
+<section class="sg-color-group" id="base-colors" aria-labelledby="base-colors-heading">
+<h2 id="base-colors-heading">Base Colors</h2>
 <div class="sg-swatch-grid">
 <article class="sg-swatch">
 <div class="sg-swatch-color" style="--sg-color:var(--uh-green);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>UH Green</h3><p data-color-value>#024731</p><p><code>--uh-green</code></p><p>University bar, department footer, and shared navigation states.</p></div>
+<div class="sg-swatch-label"><h3>UH Green</h3><p data-color-value>#024731</p><p><code>--uh-green</code></p></div>
 </article>
 <article class="sg-swatch">
 <div class="sg-swatch-color" style="--sg-color:var(--link-color);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Link Blue</h3><p data-color-value>#0a58ca</p><p><code>--link-color</code></p><p>Standard text links. This functional color is separate from the decorative accent palette.</p></div>
+<div class="sg-swatch-label"><h3>Link Blue</h3><p data-color-value>#0a58ca</p><p><code>--link-color</code></p></div>
 </article>
+</div>
+</section>
+<section class="sg-color-group" id="primary-accents" aria-labelledby="primary-accents-heading">
+<h2 id="primary-accents-heading">Primary Accent Colors</h2>
+<div class="row row-cols-1 row-cols-sm-3 g-3">
+<div class="col d-grid gap-3">
+<article class="sg-swatch">
+<div class="sg-swatch-color" style="--sg-color:var(--color-teal);" aria-hidden="true"></div>
+<div class="sg-swatch-label"><h3>Teal</h3><p data-color-value>#27665d</p><p><code>--color-teal</code></p></div>
+</article>
+<article class="sg-swatch">
+<div class="sg-swatch-color" style="--sg-color:var(--surface-green);" aria-hidden="true"></div>
+<div class="sg-swatch-label"><h3>Teal Background</h3><p data-color-value>#edf5f0</p><p><code>--surface-green</code></p></div>
+</article>
+</div>
+<div class="col d-grid gap-3">
+<article class="sg-swatch">
+<div class="sg-swatch-color" style="--sg-color:var(--color-blue);" aria-hidden="true"></div>
+<div class="sg-swatch-label"><h3>Blue</h3><p data-color-value>#354d67</p><p><code>--color-blue</code></p></div>
+</article>
+<article class="sg-swatch">
+<div class="sg-swatch-color" style="--sg-color:var(--surface-blue);" aria-hidden="true"></div>
+<div class="sg-swatch-label"><h3>Blue Background</h3><p data-color-value>#eef9fc</p><p><code>--surface-blue</code></p></div>
+</article>
+</div>
+<div class="col d-grid gap-3">
+<article class="sg-swatch">
+<div class="sg-swatch-color" style="--sg-color:var(--color-purple);" aria-hidden="true"></div>
+<div class="sg-swatch-label"><h3>Purple</h3><p data-color-value>#655b7a</p><p><code>--color-purple</code></p></div>
+</article>
+<article class="sg-swatch">
+<div class="sg-swatch-color" style="--sg-color:var(--surface-purple);" aria-hidden="true"></div>
+<div class="sg-swatch-label"><h3>Purple Background</h3><p data-color-value>#f6f4f8</p><p><code>--surface-purple</code></p></div>
+</article>
+</div>
+</div>
+</section>
+<section class="sg-color-group" id="secondary-accents" aria-labelledby="secondary-accents-heading">
+<h2 id="secondary-accents-heading">Secondary Accent Colors</h2>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+<div class="col d-grid gap-3">
+<article class="sg-swatch">
+<div class="sg-swatch-color" style="--sg-color:var(--color-bronze);" aria-hidden="true"></div>
+<div class="sg-swatch-label"><h3>Bronze</h3><p data-color-value>#755322</p><p><code>--color-bronze</code></p></div>
+</article>
+<article class="sg-swatch">
+<div class="sg-swatch-color" style="--sg-color:var(--surface-bronze);" aria-hidden="true"></div>
+<div class="sg-swatch-label"><h3>Bronze Background</h3><p data-color-value>#faf7f0</p><p><code>--surface-bronze</code></p></div>
+</article>
+</div>
+<div class="col d-grid gap-3">
+<article class="sg-swatch">
+<div class="sg-swatch-color" style="--sg-color:var(--color-brown);" aria-hidden="true"></div>
+<div class="sg-swatch-label"><h3>Brown</h3><p data-color-value>#835044</p><p><code>--color-brown</code></p></div>
+</article>
+<article class="sg-swatch">
+<div class="sg-swatch-color" style="--sg-color:var(--surface-brown);" aria-hidden="true"></div>
+<div class="sg-swatch-label"><h3>Brown Background</h3><p data-color-value>#faf2ee</p><p><code>--surface-brown</code></p></div>
+</article>
+</div>
+<div class="col d-grid gap-3">
+<article class="sg-swatch">
+<div class="sg-swatch-color" style="--sg-color:var(--color-pink);" aria-hidden="true"></div>
+<div class="sg-swatch-label"><h3>Pink</h3><p data-color-value>#943c70</p><p><code>--color-pink</code></p></div>
+</article>
+<article class="sg-swatch">
+<div class="sg-swatch-color" style="--sg-color:var(--surface-pink);" aria-hidden="true"></div>
+<div class="sg-swatch-label"><h3>Pink Background</h3><p data-color-value>#fcf1f7</p><p><code>--surface-pink</code></p></div>
+</article>
+</div>
+<div class="col d-grid gap-3">
+<article class="sg-swatch">
+<div class="sg-swatch-color" style="--sg-color:var(--color-gold);" aria-hidden="true"></div>
+<div class="sg-swatch-label"><h3>Gold</h3><p data-color-value>#b58a24</p><p><code>--color-gold</code></p></div>
+</article>
+<article class="sg-swatch">
+<div class="sg-swatch-color" style="--sg-color:var(--surface-gold);" aria-hidden="true"></div>
+<div class="sg-swatch-label"><h3>Gold Background</h3><p data-color-value>#fff8e6</p><p><code>--surface-gold</code></p></div>
+</article>
+</div>
 </div>
 </section>
 <section class="sg-color-group" id="grays" aria-labelledby="grays-heading">
 <h2 id="grays-heading">Grays</h2>
-<p>Neutral colors include white and black as well as the grays used for backgrounds, text, borders, and dividers. The unit bar and navigation currently share the same Light Gray.</p>
 <div class="sg-swatch-grid">
 <article class="sg-swatch">
 <div class="sg-swatch-color" style="--sg-color:var(--light);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>White</h3><p data-color-value>#ffffff</p><p><code>--light</code></p><p>Page backgrounds, text on dark backgrounds, and white divider bars.</p></div>
+<div class="sg-swatch-label"><h3>White</h3><p data-color-value>#ffffff</p><p><code>--light</code></p></div>
 </article>
 <article class="sg-swatch">
 <div class="sg-swatch-color" style="--sg-color:var(--text);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Black</h3><p data-color-value>#222222</p><p><code>--text</code></p><p>Used for body text. This softened black is also the current --color-black tile value.</p></div>
+<div class="sg-swatch-label"><h3>Black</h3><p data-color-value>#222222</p><p><code>--text</code></p><p>Used for text.</p></div>
 </article>
 <article class="sg-swatch">
 <div class="sg-swatch-color" style="--sg-color:var(--light-gray);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Light Gray</h3><p data-color-value>#f7f7f7</p><p><code>--light-gray</code></p><p>Both the unit-name bar and the navigation background use this same gray.</p></div>
+<div class="sg-swatch-label"><h3>Light Gray</h3><p data-color-value>#f7f7f7</p><p><code>--light-gray</code></p></div>
 </article>
 <article class="sg-swatch">
 <div class="sg-swatch-color" style="--sg-color:var(--dark-gray);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Dark Gray</h3><p data-color-value>#2d2d2d</p><p><code>--dark-gray</code></p><p>Subfooter background.</p></div>
+<div class="sg-swatch-label"><h3>Dark Gray</h3><p data-color-value>#2d2d2d</p><p><code>--dark-gray</code></p></div>
 </article>
 <article class="sg-swatch">
 <div class="sg-swatch-color" style="--sg-color:var(--border-gray);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Border Gray</h3><p data-color-value>#d2d2d2</p><p><code>--border-gray</code></p><p>Unit-bar border, hero separator line, and several card and media borders.</p></div>
+<div class="sg-swatch-label"><h3>Border Gray</h3><p data-color-value>#d2d2d2</p><p><code>--border-gray</code></p></div>
 </article>
 <article class="sg-swatch">
 <div class="sg-swatch-color" style="--sg-color:var(--nav-divider);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Divider Gray</h3><p data-color-value>#e2e2e2</p><p><code>--nav-divider</code></p><p>Section dividers, dropdown separators, and the shared frame border.</p></div>
+<div class="sg-swatch-label"><h3>Divider Gray</h3><p data-color-value>#e2e2e2</p><p><code>--nav-divider</code></p></div>
 </article>
 <article class="sg-swatch">
 <div class="sg-swatch-color" style="--sg-color:var(--icon-gray);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Icon Gray</h3><p data-color-value>#888888</p><p><code>--icon-gray</code></p><p>Shared contact and content icon treatments.</p></div>
+<div class="sg-swatch-label"><h3>Icon Gray</h3><p data-color-value>#888888</p><p><code>--icon-gray</code></p></div>
 </article>
 <article class="sg-swatch">
 <div class="sg-swatch-color" style="--sg-color:var(--note-color);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Note Gray</h3><p data-color-value>#555555</p><p><code>--note-color</code></p><p>Small explanatory notes.</p></div>
-</article>
-</div>
-</section>
-<section class="sg-color-group" id="accents" aria-labelledby="accents-heading">
-<h2 id="accents-heading">Accent Colors</h2>
-<p>Use these colors through the supported button, callout, tile, and other component variants.</p>
-<h3>Primary Accents</h3>
-<p>Teal, Blue, and Purple are the preferred accent group.</p>
-<div class="sg-swatch-grid">
-<article class="sg-swatch">
-<div class="sg-swatch-color" style="--sg-color:var(--color-teal);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Teal</h3><p data-color-value>#27665d</p><p><code>--color-teal</code></p><p>Primary accent for components.</p></div>
-</article>
-<article class="sg-swatch">
-<div class="sg-swatch-color" style="--sg-color:var(--color-blue);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Blue</h3><p data-color-value>#354d67</p><p><code>--color-blue</code></p><p>Primary accent; also used for taglines.</p></div>
-</article>
-<article class="sg-swatch">
-<div class="sg-swatch-color" style="--sg-color:var(--color-purple);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Purple</h3><p data-color-value>#655b7a</p><p><code>--color-purple</code></p><p>Primary accent for components.</p></div>
-</article>
-</div>
-<h3>Additional Accents</h3>
-<div class="sg-swatch-grid">
-<article class="sg-swatch">
-<div class="sg-swatch-color" style="--sg-color:var(--color-bronze);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Bronze</h3><p data-color-value>#755322</p><p><code>--color-bronze</code></p><p>Additional accent for components.</p></div>
-</article>
-<article class="sg-swatch">
-<div class="sg-swatch-color" style="--sg-color:var(--color-brown);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Brown</h3><p data-color-value>#835044</p><p><code>--color-brown</code></p><p>Additional accent for components.</p></div>
-</article>
-<article class="sg-swatch">
-<div class="sg-swatch-color" style="--sg-color:var(--color-pink);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Pink</h3><p data-color-value>#943c70</p><p><code>--color-pink</code></p><p>Additional accent for components.</p></div>
-</article>
-<article class="sg-swatch">
-<div class="sg-swatch-color" style="--sg-color:var(--color-gold);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Gold</h3><p data-color-value>#b58a24</p><p><code>--color-gold</code></p><p>Additional accent, including special highlights.</p></div>
-</article>
-</div>
-<h3>Accent Backgrounds</h3>
-<p>The lighter surfaces used by callouts and soft buttons are separate CSS values, rather than transparent versions of their accent colors.</p>
-<div class="sg-swatch-grid">
-<article class="sg-swatch">
-<div class="sg-swatch-color" style="--sg-color:var(--surface-green);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Green Background</h3><p data-color-value>#edf5f0</p><p><code>--surface-green</code></p><p>Surface used by green callouts and several news treatments.</p></div>
-</article>
-<article class="sg-swatch">
-<div class="sg-swatch-color" style="--sg-color:var(--surface-blue);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Blue Background</h3><p data-color-value>#eef9fc</p><p><code>--surface-blue</code></p><p>Surface used by blue callouts and soft buttons.</p></div>
-</article>
-<article class="sg-swatch">
-<div class="sg-swatch-color" style="--sg-color:var(--surface-purple);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Purple Background</h3><p data-color-value>#f6f4f8</p><p><code>--surface-purple</code></p><p>Surface used by purple callouts and soft buttons.</p></div>
-</article>
-<article class="sg-swatch">
-<div class="sg-swatch-color" style="--sg-color:var(--surface-bronze);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Bronze Background</h3><p data-color-value>#faf7f0</p><p><code>--surface-bronze</code></p><p>Surface used by bronze callouts and soft buttons.</p></div>
-</article>
-<article class="sg-swatch">
-<div class="sg-swatch-color" style="--sg-color:var(--surface-brown);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Brown Background</h3><p data-color-value>#faf2ee</p><p><code>--surface-brown</code></p><p>Surface used by brown callouts and soft buttons.</p></div>
-</article>
-<article class="sg-swatch">
-<div class="sg-swatch-color" style="--sg-color:var(--surface-pink);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Pink Background</h3><p data-color-value>#fcf1f7</p><p><code>--surface-pink</code></p><p>Surface used by pink callouts and soft buttons.</p></div>
-</article>
-<article class="sg-swatch">
-<div class="sg-swatch-color" style="--sg-color:var(--surface-gold);" aria-hidden="true"></div>
-<div class="sg-swatch-label"><h3>Gold Background</h3><p data-color-value>#fff8e6</p><p><code>--surface-gold</code></p><p>Surface used by gold callouts.</p></div>
+<div class="sg-swatch-label"><h3>Note Gray</h3><p data-color-value>#555555</p><p><code>--note-color</code></p></div>
 </article>
 </div>
 </section>
 </div>
 <section class="sg-color-group" id="color-audit" aria-labelledby="audit-heading">
-<h2 id="audit-heading">Complete CSS Inventory</h2>
+<details class="sg-audit-details">
+<summary id="audit-heading">Complete CSS Inventory</summary>
+<div class="sg-audit-content">
 <p>This audit covers the shared common.css and shell.css, the GEO, SOC, and WGSS local stylesheets, and the guide’s own stylesheet. The three department override files currently contain no color declarations.</p>
 <p>Additional values include keyboard-focus blue, hero-credit link blue, mini-callout gold, menu-icon grays, Bluesky card backgrounds, and transparent overlays and shadows. They are documented below without silently changing the shared design.</p>
 <p class="text-note">The inventory lists written CSS values. Short hex, long hex, and named forms can represent the same color, such as #fff, #ffffff, and white. currentColor and transparent describe behavior rather than additional fixed colors. Checkerboards show transparency.</p>
@@ -168,6 +168,8 @@ description: Institutional colors, grays, primary and secondary accents, and a c
 .site-footer .footer-department-webmaster a:focus-visible,
 .site-footer .footer-department-support a:focus-visible</code><br>outline</li><li><code>css-shared/src/shell.css:615</code><br><code>.footer-contact-link svg</code><br>fill</li><li><code>css-shared/src/shell.css:685</code><br><code>.site-footer .footer-languages a:focus-visible</code><br>outline</li><li><code>css-shared/src/shell.css:774</code><br><code>.nav-main-icon svg,
 .nav-menu-icon-wrap svg</code><br>fill</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:rgb(0 0 0 / 10%);"></span></span></td><th scope="row"><code>rgb(0 0 0 / 10%)</code></th><td><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>1 declaration</summary><ul><li><code>css-shared/src/shell.css:629</code><br><code>.footer-language-heading-bar</code><br>background</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:rgb(0 0 0 / 15%);"></span></span></td><th scope="row"><code>rgb(0 0 0 / 15%)</code></th><td><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>1 declaration</summary><ul><li><code>css-shared/src/shell.css:623</code><br><code>.footer-language-band</code><br>background</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:rgba(0, 0, 0, 0.08);"></span></span></td><th scope="row"><code>rgba(0, 0, 0, 0.08)</code></th><td><p class="text-note">Defined as <code>--frame-shadow</code>.</p><details class="sg-audit-use"><summary>1 declaration</summary><ul><li><code>css-shared/src/common.css:21</code><br><code>:root</code><br>--frame-shadow</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:rgba(0, 0, 0, 0.12);"></span></span></td><th scope="row"><code>rgba(0, 0, 0, 0.12)</code></th><td><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>2 declarations</summary><ul><li><code>css-shared/src/shell.css:26</code><br><code>.sticky-header</code><br>box-shadow</li><li><code>css-shared/src/shell.css:329</code><br><code>.unit-nav .dropdown:hover</code><br>filter</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:rgba(0, 0, 0, 0.28);"></span></span></td><th scope="row"><code>rgba(0, 0, 0, 0.28)</code></th><td><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>1 declaration</summary><ul><li><code>css-shared/src/common.css:256</code><br><code>.page-hero</code><br>box-shadow</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:rgba(0, 0, 0, var(--hero-location-bg-opacity));"></span></span></td><th scope="row"><code>rgba(0, 0, 0, var(--hero-location-bg-opacity))</code></th><td><p class="text-note">Hero label opacity is controlled locally by --hero-location-bg-opacity (currently 0.78).</p><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>1 declaration</summary><ul><li><code>css-shared/src/common.css:339</code><br><code>.page-hero--layered .hero-location</code><br>background</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:rgba(255, 255, 255, 0.4);"></span></span></td><th scope="row"><code>rgba(255, 255, 255, 0.4)</code></th><td><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>2 declarations</summary><ul><li><code>css-shared/src/shell.css:489</code><br><code>.footer-grid::after</code><br>border-top</li><li><code>css-shared/src/shell.css:504</code><br><code>.footer-grid::after</code><br>border-top</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:rgba(255, 255, 255, 0.5);"></span></span></td><th scope="row"><code>rgba(255, 255, 255, 0.5)</code></th><td><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>1 declaration</summary><ul><li><code>css-shared/src/shell.css:76</code><br><code>.uh-brand .navbar-toggler</code><br>border-color</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:transparent;"></span></span></td><th scope="row"><code>transparent</code></th><td><p class="text-note">Fully transparent; the checkerboard represents the background showing through.</p><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>6 declarations</summary><ul><li><code>css-shared/src/shell.css:188</code><br><code>.unit-icon-button</code><br>background</li><li><code>css-shared/src/shell.css:260</code><br><code>.unit-nav .nav-trigger</code><br>background</li><li><code>style-guide/src/style-guide.css:300</code><br><code>.sg-audit-chip</code><br>background-image</li><li><code>style-guide/src/style-guide.css:300</code><br><code>.sg-audit-chip</code><br>background-image</li><li><code>style-guide/src/style-guide.css:300</code><br><code>.sg-audit-chip</code><br>background-image</li><li><code>style-guide/src/style-guide.css:300</code><br><code>.sg-audit-chip</code><br>background-image</li></ul></details></td></tr></tbody></table></div></div></details><details class="sg-audit-details"><summary>Guide-Only Presentation Values (9 values)</summary><div class="sg-audit-content"><div class="sg-table-wrap"><table class="sg-audit-table"><caption>Guide-Only Presentation Values</caption><thead><tr><th scope="col">Swatch</th><th scope="col">CSS value</th><th scope="col">Where it appears</th></tr></thead><tbody><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:#253548;"></span></span></td><th scope="row"><code>#253548</code></th><td><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>1 declaration</summary><ul><li><code>style-guide/src/style-guide.css:70</code><br><code>.sg-code pre, .sg-preview-code</code><br>color</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:#a0afbf;"></span></span></td><th scope="row"><code>#a0afbf</code></th><td><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>3 declarations</summary><ul><li><code>style-guide/src/style-guide.css:120</code><br><code>.sg-rule-demo</code><br>border-inline</li><li><code>style-guide/src/style-guide.css:125</code><br><code>.sg-space-demo</code><br>border-block</li><li><code>style-guide/src/style-guide.css:136</code><br><code>.sg-grid-cell</code><br>border</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:#cbd5df;"></span></span></td><th scope="row"><code>#cbd5df</code></th><td><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>2 declarations</summary><ul><li><code>style-guide/src/style-guide.css:19</code><br><code>.sg-index a</code><br>border</li><li><code>style-guide/src/style-guide.css:200</code><br><code>.sg-asset-panel</code><br>border</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:#dbe2e8;"></span></span></td><th scope="row"><code>#dbe2e8</code></th><td><p class="text-note">Defined as <code>--sg-border</code>.</p><p class="text-note">Also written directly in a component rule.</p><details class="sg-audit-use"><summary>3 declarations</summary><ul><li><code>style-guide/src/style-guide.css:5</code><br><code>.sg-reference, .sg-shell-reference</code><br>--sg-border</li><li><code>style-guide/src/style-guide.css:218</code><br><code>.sg-directory-card</code><br>border</li><li><code>style-guide/src/style-guide.css:229</code><br><code>.sg-related</code><br>border-top</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:#edf2f7;"></span></span></td><th scope="row"><code>#edf2f7</code></th><td><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>2 declarations</summary><ul><li><code>style-guide/src/style-guide.css:124</code><br><code>.sg-space-demo</code><br>background</li><li><code>style-guide/src/style-guide.css:135</code><br><code>.sg-grid-cell</code><br>background</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:#f3f5f8;"></span></span></td><th scope="row"><code>#f3f5f8</code></th><td><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>1 declaration</summary><ul><li><code>style-guide/src/style-guide.css:69</code><br><code>.sg-code pre, .sg-preview-code</code><br>background</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:#f5f7fa;"></span></span></td><th scope="row"><code>#f5f7fa</code></th><td><p class="text-note">Defined as <code>--sg-surface</code>.</p><p class="text-note">Also written directly in a component rule.</p><details class="sg-audit-use"><summary>2 declarations</summary><ul><li><code>style-guide/src/style-guide.css:6</code><br><code>.sg-reference, .sg-shell-reference</code><br>--sg-surface</li><li><code>style-guide/src/style-guide.css:220</code><br><code>.sg-directory-card</code><br>background</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:#fafbfd;"></span></span></td><th scope="row"><code>#fafbfd</code></th><td><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>1 declaration</summary><ul><li><code>style-guide/src/style-guide.css:121</code><br><code>.sg-rule-demo</code><br>background</li></ul></details></td></tr><tr><td><span class="sg-audit-chip" aria-hidden="true"><span style="--hero-location-bg-opacity:0.78;color:var(--text);background:white;"></span></span></td><th scope="row"><code>white</code></th><td><p class="text-note">Written directly in component styling.</p><details class="sg-audit-use"><summary>1 declaration</summary><ul><li><code>style-guide/src/style-guide.css:160</code><br><code>.sg-typography-frame</code><br>background</li></ul></details></td></tr></tbody></table></div></div></details><p class="text-note">Source locations describe this audit snapshot. Swatches in the palette above use the loaded shared variables; declaration locations and the full inventory should be reviewed again when the CSS changes.</p>
+</div>
+</details>
 </section>
 </div>
 <script src="{{ '/assets/style-guide.js' | url }}" defer></script>
