@@ -55,7 +55,7 @@ font-size: .875rem;
 padding: 1.5rem;
 min-width: 0;
 }
-.sg-specimen > :last-child {
+.sg-specimen > :last-child:not(.media-row) {
 margin-bottom: 0;
 }
 .sg-entry details {

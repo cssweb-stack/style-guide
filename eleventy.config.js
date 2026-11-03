@@ -7,6 +7,7 @@ eleventyConfig.addWatchTarget(sharedRoot + "/src");
 eleventyConfig.on("eleventy.beforeWatch", () => syncShared());
 eleventyConfig.addFilter("telephone", value => String(value || "").replace(/[^\d+]/g, ""));
 eleventyConfig.addPassthroughCopy({ "src/common.css": "common.css" });
+eleventyConfig.addPassthroughCopy({ "src/_includes/icons": "assets/icons" });
 eleventyConfig.addPassthroughCopy({ "src/shell.css": "shell.css" });
 eleventyConfig.addPassthroughCopy({ "src/style-guide.css": "geo.css" });
 eleventyConfig.addPassthroughCopy({ "src/_media": "_media" });

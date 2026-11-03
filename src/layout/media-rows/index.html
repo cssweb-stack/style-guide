@@ -9,69 +9,37 @@ description: "Media Rows examples and usage guidance for College of Social Scien
 {% from "components/layouts.njk" import mediaRow, grid %}
 {% from "components/mini-callout.njk" import miniCallout %}
 <div class="sg-reference">
-<div class="page-header"><h1>Media Rows</h1><p class="intro-highlight">Layout reference.</p><p class="page-intro">Pair a photo or colored tile with text using one of three centrally controlled left-column widths.</p></div>
-<section class="sg-section" id="media-rows" aria-labelledby="media-rows-heading"><h2 id="media-rows-heading">Media and text rows</h2><p>Small: <span data-token="--media-width-small">7rem</span>; medium: <span data-token="--media-width-medium">10.125rem</span>; large: <span data-token="--media-width-large">13.25rem</span>. Gap: <span data-token="--media-gap">1.5rem</span>. Values are read from the shared tokens.</p>
+<div class="page-header"><h1>Media Rows</h1><p class="intro-highlight">Layout reference.</p><p class="page-intro">Pair a photo or colored tile with text using the same shared two-column layout.</p></div>
+<section class="sg-section" id="media-rows" aria-labelledby="media-rows-heading">
+<h2 id="media-rows-heading">Media and text rows</h2>
+<p>Every ordinary photo and icon row uses <code>.media-row</code>: a <span data-token="--media-width">189px</span> left column, a flexible right column, a <span data-token="--media-gap">1.5rem</span> column gap, and a <span data-token="--academic-photo-row-space-after">2.25rem</span> bottom margin. Rows stack below 768px. Photo frames and icon styling are independent of layout.</p>
+<p>Event dates, contact/map rows, and chair/profile messages retain their dedicated dimensions using the same structure. Homepage degree boxes, faculty profiles, and advisor cards keep their separate component layouts.</p>
 <article class="sg-entry">
-<div class="sg-entry-meta"><h3>Small left column</h3><p><code>.media-row .media-row-small</code></p><p>Widths come from --media-width-small. Rows stack below 768px; these are current values, not new sizing changes.</p></div>
+<div class="sg-entry-meta"><h3>Photo and text</h3><p><code>.media-row</code></p><p>The photo uses the same column, gap, and bottom spacing as an icon box.</p></div>
 <div class="sg-specimen">
-{% from "components/layouts.njk" import mediaRow %}
-{% call mediaRow("small") %}
-<div class="media-visual tile tile-blue icon-tile">{% include "icons/book.svg" %}</div>
-<div class="media-content">
-<h3>Small media column</h3>
-<p>The left column uses the shared small width. The right column fills the available space.</p>
-</div>
+{% call mediaRow() %}
+<img class="photo-frame academic-photo-frame media-visual" src="{{ '/_media/examples/sample-photo.svg' | url }}" alt="Sample academic photo illustration" width="400" height="400">
+<div class="media-content"><h3 class="media-title">Shared photo row</h3><p>The right column automatically fills the remaining width. Image framing remains a separate content choice.</p></div>
 {% endcall %}
 </div>
-<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/layouts.njk&quot; import mediaRow %}
-{% call mediaRow(&quot;small&quot;) %}
-&lt;div class=&quot;media-visual tile tile-blue icon-tile&quot;&gt;{% include &quot;icons/book.svg&quot; %}&lt;/div&gt;
-&lt;div class=&quot;media-content&quot;&gt;
-&lt;h3&gt;Small media column&lt;/h3&gt;
-&lt;p&gt;The left column uses the shared small width. The right column fills the available space.&lt;/p&gt;
-&lt;/div&gt;
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from "components/layouts.njk" import mediaRow %}
+{% call mediaRow() %}
+&lt;img class="photo-frame academic-photo-frame media-visual" src="PHOTO_URL" alt="PHOTO_DESCRIPTION" width="400" height="400"&gt;
+&lt;div class="media-content"&gt;&lt;h3 class="media-title"&gt;Heading&lt;/h3&gt;&lt;p&gt;Description.&lt;/p&gt;&lt;/div&gt;
 {% endcall %}{% endraw %}</code></pre></div></details>
 </article>
 <article class="sg-entry">
-<div class="sg-entry-meta"><h3>Medium left column</h3><p><code>.media-row .media-row-medium</code></p><p>Widths come from --media-width-medium. Rows stack below 768px; these are current values, not new sizing changes.</p></div>
+<div class="sg-entry-meta"><h3>Colored icon and text</h3><p><code>.media-row</code></p><p>The SVG icon retains its own 48px dimensions within the shared 189px column.</p></div>
 <div class="sg-specimen">
-{% from "components/layouts.njk" import mediaRow %}
-{% call mediaRow("medium") %}
-<div class="media-visual tile tile-blue icon-tile">{% include "icons/book.svg" %}</div>
-<div class="media-content">
-<h3>Medium media column</h3>
-<p>The left column uses the shared medium width. The right column fills the available space.</p>
-</div>
+{% call mediaRow() %}
+<div class="media-visual tile tile-blue icon-tile" aria-hidden="true"><img class="color-box-icon" src="{{ '/assets/icons/book-white.svg' | url }}" alt=""></div>
+<div class="media-content"><h3 class="media-title">Shared icon row</h3><p>The same grid structure provides identical spacing without a separate icon sizing variant.</p></div>
 {% endcall %}
 </div>
-<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/layouts.njk&quot; import mediaRow %}
-{% call mediaRow(&quot;medium&quot;) %}
-&lt;div class=&quot;media-visual tile tile-blue icon-tile&quot;&gt;{% include &quot;icons/book.svg&quot; %}&lt;/div&gt;
-&lt;div class=&quot;media-content&quot;&gt;
-&lt;h3&gt;Medium media column&lt;/h3&gt;
-&lt;p&gt;The left column uses the shared medium width. The right column fills the available space.&lt;/p&gt;
-&lt;/div&gt;
-{% endcall %}{% endraw %}</code></pre></div></details>
-</article>
-<article class="sg-entry">
-<div class="sg-entry-meta"><h3>Large left column</h3><p><code>.media-row .media-row-large</code></p><p>Widths come from --media-width-large. Rows stack below 768px; these are current values, not new sizing changes.</p></div>
-<div class="sg-specimen">
-{% from "components/layouts.njk" import mediaRow %}
-{% call mediaRow("large") %}
-<div class="media-visual tile tile-blue icon-tile">{% include "icons/book.svg" %}</div>
-<div class="media-content">
-<h3>Large media column</h3>
-<p>The left column uses the shared large width. The right column fills the available space.</p>
-</div>
-{% endcall %}
-</div>
-<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from &quot;components/layouts.njk&quot; import mediaRow %}
-{% call mediaRow(&quot;large&quot;) %}
-&lt;div class=&quot;media-visual tile tile-blue icon-tile&quot;&gt;{% include &quot;icons/book.svg&quot; %}&lt;/div&gt;
-&lt;div class=&quot;media-content&quot;&gt;
-&lt;h3&gt;Large media column&lt;/h3&gt;
-&lt;p&gt;The left column uses the shared large width. The right column fills the available space.&lt;/p&gt;
-&lt;/div&gt;
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}{% from "components/layouts.njk" import mediaRow %}
+{% call mediaRow() %}
+&lt;div class="media-visual tile tile-blue icon-tile" aria-hidden="true"&gt;&lt;img class="color-box-icon" src="{{ '/assets/icons/book-white.svg' | url }}" alt=""&gt;&lt;/div&gt;
+&lt;div class="media-content"&gt;&lt;h3 class="media-title"&gt;Heading&lt;/h3&gt;&lt;p&gt;Description.&lt;/p&gt;&lt;/div&gt;
 {% endcall %}{% endraw %}</code></pre></div></details>
 </article>
 </section><nav class="sg-related" aria-label="More layout examples"><p><strong>Layout</strong></p><ul><li><a href="{{ '/layout/media-rows/' | url }}">Media Rows</a></li><li><a href="{{ '/layout/grids/' | url }}">Grids</a></li><li><a href="{{ '/layout/dividers-and-spacing/' | url }}">Dividers and Spacing</a></li></ul></nav></div>

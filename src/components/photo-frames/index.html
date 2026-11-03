@@ -41,17 +41,17 @@ description: "Photo Frames examples and usage guidance for College of Social Sci
 <p><code>--academic-photo-row-dividers</code> is <code>none</code> by default. Set it to <code>block</code> to enable lines for all academic photo rows. Add <code>data-divider</code> to an individual row to show its line. Dividers sit within the existing gap and add no spacing.</p>
 </div>
 <div class="sg-specimen">
-<section class="media-row media-row-large academic-photo-row" aria-labelledby="academic-photo-default">
+<section class="media-row academic-photo-row" aria-labelledby="academic-photo-default">
 <img class="photo-frame academic-photo-frame media-visual" src="{{ '/_media/examples/sample-photo.svg' | url }}" alt="Sample academic photo illustration" width="400" height="400" loading="lazy">
 <div class="media-content"><h4 id="academic-photo-default">Academic photo frame</h4><p>Pinline frame and bottom-only spacing. There is no divider after this row.</p></div>
 </section>
-<section class="media-row media-row-large academic-photo-row" data-divider aria-labelledby="academic-photo-divider">
+<section class="media-row academic-photo-row" data-divider aria-labelledby="academic-photo-divider">
 <img class="photo-frame academic-photo-frame media-visual" src="{{ '/_media/examples/sample-photo.svg' | url }}" alt="Sample academic photo illustration" width="400" height="400" loading="lazy">
 <div class="media-content"><h4 id="academic-photo-divider">Optional row divider</h4><p>This row opts into a line with the shared per-row hook. The final gap before the following component remains the same size.</p></div>
 </section>
 <div class="callout callout-blue"><p>Following component: the preceding row supplies its own bottom gap.</p></div>
 </div>
-<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;section class="media-row media-row-large academic-photo-row" data-divider&gt;
+<details><summary>Code and usage</summary><div class="sg-code"><button class="sg-copy" type="button" data-copy-code>Copy code</button><span class="sg-code-status" role="status" aria-live="polite"></span><pre><code>{% raw %}&lt;section class="media-row academic-photo-row" data-divider&gt;
   &lt;img class="photo-frame academic-photo-frame media-visual" src="PHOTO_URL" alt="PHOTO_DESCRIPTION" width="400" height="400"&gt;
   &lt;div class="media-content"&gt;
     &lt;h3&gt;Academic topic&lt;/h3&gt;
