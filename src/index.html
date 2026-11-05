@@ -1,15 +1,12 @@
 ---
 layout: layouts/base.njk
-title: "College Website Style Guide"
+title: College Website Style Guide
 hidePageTitle: true
 permalink: "/"
-description: "College Website Style Guide examples and usage guidance for College of Social Sciences websites."
+description: Shared styles and components for College of Social Sciences websites.
 ---
-{% from "components/button.njk" import button %}
-{% from "components/layouts.njk" import mediaRow, grid %}
-{% from "components/mini-callout.njk" import miniCallout %}
-<a href="{{ '/' | url }}" data-guide-home hidden>Guide home</a>
-<div class="sg-reference">
-<div class="page-header"><h1>College Website Style Guide</h1><p class="intro-highlight">A shared foundation for department websites.</p><p class="page-intro">A practical reference for consistent, accessible department websites.</p></div>
-<div class="sg-home-copy"><p>This guide documents the shared design system used by College of Social Sciences websites. It provides a common reference for colors, typography, layouts, and reusable components while allowing each department to maintain its own identity and content.</p><p>Use the navigation to choose a topic. Each page shows a focused set of examples, their names, and guidance for using them. Code remains available in expandable panels when you need it.</p><p>The guide reflects the current shared styles. Design changes should be reviewed before they are released to connected department websites.</p></div><div class="sg-directory"><article class="sg-directory-card"><h2><a href="{{ '/colors/' | url }}">Colors</a></h2><p>The shared palette and its supported uses.</p></article><article class="sg-directory-card"><h2><a href="{{ '/typography/' | url }}">Typography</a></h2><p>Headings, introductions, body text, links, and lists.</p></article><article class="sg-directory-card"><h2><a href="{{ '/layout/media-rows/' | url }}">Layout</a></h2><p>Media rows, grids, dividers, and spacing.</p></article><article class="sg-directory-card"><h2><a href="{{ '/components/buttons/' | url }}">Components</a></h2><p>Buttons, callouts, tiles, photos, profiles, and advising.</p></article><article class="sg-directory-card"><h2><a href="{{ '/heroes/hero-only/' | url }}">Heroes</a></h2><p>Image-only, labeled, and attributed examples.</p></article><article class="sg-directory-card"><h2><a href="{{ '/shell/' | url }}">Site Shell</a></h2><p>University branding, department identity, navigation, and footer.</p></article></div><p class="sg-maintainer-link">Maintaining a website? See <a href="{{ '/reference/where-to-edit/' | url }}">Where to Edit</a> for source locations and the shared/local distinction.</p></div>
-<script src="{{ '/assets/style-guide.js' | url }}" defer></script>
+<header class="page-header">
+<h1>College Website Style Guide</h1>
+<p class="intro">A reference for the shared styles, layouts, and components used by College of Social Sciences websites.</p>
+</header>
+<p>Use the navigation to review headers, footers, and component examples. The guide reads the shared source directly, so it reflects changes made in css-shared.</p>
