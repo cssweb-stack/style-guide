@@ -1,0 +1,63 @@
+---
+layout: base.njk
+title: Tiles and Photo
+hidePageTitle: true
+permalink: /components/tiles-and-photo/
+description: Shared tile and photo borders, corners, and shadow.
+---
+<div class="sg-reference">
+<h1>Tiles and Photo</h1>
+<section class="mb-5" aria-labelledby="tiles-heading">
+<h2 id="tiles-heading">Tiles with text</h2>
+<div class="row row-cols-2 row-cols-md-4 sg-treatment-tiles g-3">
+<div class="col"><div class="tile-style square-tile" style="--tile-color: var(--color-teal);">Teal</div></div>
+<div class="col"><div class="tile-style square-tile" style="--tile-color: var(--color-blue);">Blue</div></div>
+<div class="col"><div class="tile-style square-tile" style="--tile-color: var(--color-purple);">Purple</div></div>
+<div class="col"><div class="tile-style square-tile" style="--tile-color: var(--color-bronze);">Bronze</div></div>
+<div class="col"><div class="tile-style square-tile" style="--tile-color: var(--color-brown);">Brown</div></div>
+<div class="col"><div class="tile-style square-tile" style="--tile-color: var(--color-pink);">Pink</div></div>
+<div class="col"><div class="tile-style square-tile" style="--tile-color: var(--color-gold);">Gold</div></div>
+</div>
+</section>
+<section class="mb-5" aria-labelledby="icon-tiles-heading">
+<h2 id="icon-tiles-heading">Tiles with icons</h2>
+<div class="row row-cols-2 row-cols-md-4 sg-treatment-tiles g-3">
+<div class="col"><div class="tile-style square-tile icon-tile" style="--tile-color: var(--color-teal);" role="img" aria-label="Teal info circle tile">{% include "media/icons/info-circle.svg" %}</div></div>
+<div class="col"><div class="tile-style square-tile icon-tile" style="--tile-color: var(--color-blue);" role="img" aria-label="Blue calendar3 tile">{% include "media/icons/calendar3.svg" %}</div></div>
+<div class="col"><div class="tile-style square-tile icon-tile" style="--tile-color: var(--color-purple);" role="img" aria-label="Purple mortarboard tile">{% include "media/icons/mortarboard.svg" %}</div></div>
+<div class="col"><div class="tile-style square-tile icon-tile" style="--tile-color: var(--color-bronze);" role="img" aria-label="Bronze book tile">{% include "media/icons/book.svg" %}</div></div>
+<div class="col"><div class="tile-style square-tile icon-tile" style="--tile-color: var(--color-brown);" role="img" aria-label="Brown globe tile">{% include "media/icons/globe.svg" %}</div></div>
+<div class="col"><div class="tile-style square-tile icon-tile" style="--tile-color: var(--color-pink);" role="img" aria-label="Pink people tile">{% include "media/icons/people.svg" %}</div></div>
+<div class="col"><div class="tile-style square-tile icon-tile" style="--tile-color: var(--color-gold);" role="img" aria-label="Gold star tile">{% include "media/icons/star.svg" %}</div></div>
+</div>
+</section>
+<section class="mb-5" aria-labelledby="photos-heading">
+<h2 id="photos-heading">Photos</h2>
+<div class="row row-cols-2 row-cols-lg-4 g-4">
+<div class="col">
+<figure class="mb-0">
+<img class="photo-style sg-treatment-photo" style="--photo-grayscale: 100%;" src="{{ '/media/examples/photo-demo.webp' | url }}" alt="Woman holding a microphone" width="564" height="564">
+<figcaption class="mt-3">100% grayscale — black and white</figcaption>
+</figure>
+</div>
+<div class="col">
+<figure class="mb-0">
+<img class="photo-style sg-treatment-photo" style="--photo-grayscale: 66%;" src="{{ '/media/examples/photo-demo.webp' | url }}" alt="Woman holding a microphone" width="564" height="564">
+<figcaption class="mt-3">66% grayscale</figcaption>
+</figure>
+</div>
+<div class="col">
+<figure class="mb-0">
+<img class="photo-style sg-treatment-photo" style="--photo-grayscale: 33%;" src="{{ '/media/examples/photo-demo.webp' | url }}" alt="Woman holding a microphone" width="564" height="564">
+<figcaption class="mt-3">33% grayscale</figcaption>
+</figure>
+</div>
+<div class="col">
+<figure class="mb-0">
+<img class="photo-style sg-treatment-photo" style="--photo-grayscale: 0%;" src="{{ '/media/examples/photo-demo.webp' | url }}" alt="Woman holding a microphone" width="564" height="564">
+<figcaption class="mt-3">0% grayscale — full color</figcaption>
+</figure>
+</div>
+</div>
+</section>
+</div>

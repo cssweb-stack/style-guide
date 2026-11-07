@@ -13,7 +13,7 @@ export function sharedSource() {
 return path.resolve(project, process.env.SHARED_SOURCE || sharedSettings().localPath);
 }
 export function loadUnit() {
-const directory = path.join(sharedSource(), 'src/data/sites', sharedSettings().unit);
+const directory = path.join(sharedSource(), 'src/data/units', sharedSettings().unit);
 const records = {};
 for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
 if (entry.isSymbolicLink()) throw new Error(`Unit data cannot be a symbolic link: ${entry.name}`);
@@ -68,7 +68,9 @@ for (const name of files.filter(name => /^(?:assets|media)\//.test(name) && !nam
 if (fs.existsSync(path.join(project, 'src', name))) throw new Error(`Shared/local asset collision: ${name}. Use distinct filenames; do not overwrite one source with another.`);
 }
 for (const name of files.filter(name => name.startsWith('includes/'))) {
-if (fs.existsSync(path.join(project, 'src', name))) throw new Error(`Shared/local template collision: ${name}`);
+const local = path.join(project, 'src', name);
+const baseForwarder = name === 'includes/base.njk' && fs.existsSync(local) && fs.readFileSync(local, 'utf8').trim() === '{% include "shared/base.njk" %}';
+if (fs.existsSync(local) && !baseForwarder) throw new Error(`Shared/local template collision: ${name}`);
 }
 const hash = crypto.createHash('sha256');
 for (const name of files) { hash.update(name); hash.update('\0'); hash.update(fs.readFileSync(path.join(sharedDir, name))); hash.update('\0'); }

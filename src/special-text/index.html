@@ -1,0 +1,39 @@
+---
+layout: base.njk
+title: Text with Icons
+hidePageTitle: true
+permalink: /special-text/
+description: Six shared inline icon treatments for College of Social Sciences websites.
+---
+<div class="sg-reference">
+<h1>Text with Icons</h1>
+<p>Special text treatments using Bootstrap icons.</p>
+<section class="mb-5" aria-labelledby="icon-treatments-heading">
+<div class="row row-cols-1 gx-4 gy-5 mt-0">
+<div class="col mt-4">
+<h3>Phone <code>.phone</code></h3>
+<p class="phone mb-0 mt-0"><span class="icon-text"><a href="tel:+18085550100">(808) 555-0100</a></span></p>
+</div>
+<div class="col">
+<h3>Email <code>.email</code></h3>
+<p class="email mb-0 mt-0"><span class="icon-text"><a href="mailto:example@example.com">example@example.com</a></span></p>
+</div>
+<div class="col">
+<h3>Information <code>.info</code></h3>
+<p class="info mb-0 mt-0"><span class="icon-text">Find additional details and resources on the program page.</span></p>
+</div>
+<div class="col">
+<h3>Calendar <code>.date</code></h3>
+<p class="date mb-0 mt-0"><span class="icon-text">Check the program page for upcoming deadlines and events.</span></p>
+</div>
+<div class="col">
+<h3>Action <code>.action</code></h3>
+<p class="mb-0 mt-0"><a class="action" href="{{ '/typography/' | url }}"><span class="icon-text">Explore typography examples</span></a></p>
+</div>
+<div class="col">
+<h3>Smile <code>.smile</code></h3>
+<p class="smile mb-0 mt-0">{% include "media/icons/emoji-smile.svg" %}<span>There is a place for your curiosity.</span></p>
+</div>
+</div>
+</section>
+</div>

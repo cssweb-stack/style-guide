@@ -8,26 +8,20 @@ import { checkShared, loadUnit, loadUH, loadCommon } from './scripts/shared-sour
 const project = path.dirname(fileURLToPath(import.meta.url));
 const sourceDir = path.join(project, 'src');
 export default function(eleventyConfig) {
-// Diagnostic: use full page reloads while investigating disappearing examples.
+// Reload whole pages so shared-source edits remain consistent.
 eleventyConfig.setServerOptions({ domDiff: false });
+// Shared-source config resets must not reuse stale page input from earlier builds.
+if (['serve', 'watch'].includes(process.env.ELEVENTY_RUN_MODE)) {
+eleventyConfig.setUseTemplateCache(false);
+}
 const sharedRoot = checkShared();
 const sharedDir = path.join(sharedRoot, 'src');
 const sharedIncludes = path.join(sharedDir, 'includes');
-// Resolve old specimen imports without copying shared templates into this project.
-const aliases = {};
-function mapIncludes(directory) {
-for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
-const absolute = path.join(directory, entry.name);
-if (entry.isDirectory()) mapIncludes(absolute);
-else if (entry.name.endsWith('.njk')) aliases['components/' + entry.name] = path.relative(sharedIncludes, absolute).split(path.sep).join('/');
-}
-}
-mapIncludes(sharedIncludes);
+// The local base layout delegates to the authoritative shared document shell.
 class GuideLoader extends nunjucks.FileSystemLoader {
 getSource(name) {
-if (name.startsWith('icons/')) name = 'media/' + name;
-if (/^components\/(?:divider|space)-/.test(name)) name = 'legacy/' + path.basename(name);
-return super.getSource(aliases[name] || name);
+if (name === 'shared/base.njk') name = path.join(sharedIncludes, 'base.njk');
+return super.getSource(name);
 }
 }
 const environment = new nunjucks.Environment(new GuideLoader([sharedIncludes, sharedDir, path.join(sourceDir, 'includes')], { noCache: true }), { autoescape: false });
@@ -44,15 +38,14 @@ return palette[name];
 eleventyConfig.addGlobalData('common', () => loadCommon());
 eleventyConfig.addFilter('url', value => {
 let url = String(value || '');
-url = url.replace(/^\/_media\/heros\//, '/media/heroes/').replace(/^\/_media\/examples\//, '/media/examples/').replace(/^\/_media\/other\/contour-lines.svg$/, '/media/backgrounds/contour-lines.svg').replace(/^\/_media\/branding\/favicon\//, '/media/branding/favicon/').replace(/^\/_media\/branding\/(uh-manoa-logo-white|geo-logo-white)\.svg$/, (_, name) => '/media/branding/logos/' + (name === 'geo-logo-white' ? 'geo-logo-vert-white' : name) + '.svg').replace(/^\/_media\/branding\//, '/media/branding/backgrounds/').replace(/^\/assets\/icons\//, '/media/icons/').replace(/^\/assets\/(site|bluesky-feed)\.js$/, '/assets/js/$1.js');
 const prefix = (process.env.SITE_PATH_PREFIX || '/').replace(/\/$/, '');
 return url.startsWith('/') && !url.startsWith('//') ? prefix + url : url;
 });
 eleventyConfig.addGlobalData('footerUnits', () => {
 const directory = path.join(sharedDir, 'data/units');
-return fs.readdirSync(directory, { withFileTypes: true }).filter(entry => entry.isDirectory() && fs.existsSync(path.join(directory, entry.name, 'unit-details.json'))).map(entry => {
+return fs.readdirSync(directory, { withFileTypes: true }).filter(entry => entry.isDirectory() && entry.name !== 'style-guide' && fs.existsSync(path.join(directory, entry.name, 'unit-details.json'))).map(entry => {
 const unit = path.join(directory, entry.name);
-return { key: entry.name, site: JSON.parse(fs.readFileSync(path.join(unit, 'unit-details.json'), 'utf8')), social: fs.existsSync(path.join(unit, 'social.json')) ? JSON.parse(fs.readFileSync(path.join(unit, 'social.json'), 'utf8')) : { links: [] } };
+return { key: entry.name, site: { ...JSON.parse(fs.readFileSync(path.join(unit, 'unit-details.json'), 'utf8')), ...JSON.parse(fs.readFileSync(path.join(unit, 'site-settings.json'), 'utf8')) }, social: fs.existsSync(path.join(unit, 'social.json')) ? JSON.parse(fs.readFileSync(path.join(unit, 'social.json'), 'utf8')) : { links: [] } };
 }).sort((a, b) => a.site.shortName.localeCompare(b.site.shortName, 'en', { sensitivity: 'base' }));
 });
 // Reuse the footer comparison's unit selection, ordering, and identity records.
@@ -115,8 +108,6 @@ return { path: './' + relative + suffix, external: true };
 }
 }]
 });
-// Retain the standalone typography specimen's existing stylesheet URL.
-fs.copyFileSync(path.join(project, '_site/style-guide.css'), path.join(project, '_site/common.css'));
 });
 // Publish images/fonts/scripts only; JSON, templates and helper modules stay private to the build.
 for (const root of [sharedDir, sourceDir]) {

@@ -1,6 +1,20 @@
 ---
-layout: footer-showcase.njk
-title: Footers
+layout: comparison.njk
+title: UH Mānoa Footers
 permalink: "/footers/"
 ---
-{% include "footer-examples.njk" %}
+<div class="container main-content">
+<header class="page-header">
+<h1>UH Mānoa Footers</h1>
+<p class="tagline">A shared foundation. A consistent way to connect.</p>
+<p class="intro">These footers bring unit information and university resources together in a familiar place on every College of Social Sciences website. Each example comes from the same shared template and styles, with the unit’s own details added automatically. This shared approach supports University of Hawaiʻi at Mānoa branding and keeps the college’s websites consistent and easier to maintain.</p>
+</header>
+</div>
+{% for unit in footerUnits %}
+<section class="sg-footer-example">
+{% set site = unit.site %}
+{% set social = unit.social %}
+{% set footerId = 'showcase-' + unit.key %}
+{% include "layouts/branding/footer/footer.njk" %}
+</section>
+{% endfor %}
