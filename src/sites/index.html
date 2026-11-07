@@ -2,4 +2,38 @@
 layout: base.njk
 title: Sites
 permalink: /sites/
+description: Quick links to College of Social Sciences website repositories and GitHub sites.
 ---
+<p class="tagline">Many sites. One shared home.</p>
+<p class="intro">A quick reference for our academic and administrative projects on GitHub. Open a repository or visit its published GitHub site using the links available for each unit.</p>
+
+{% macro siteGrid(units, color) %}
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3">
+{% for unit in units %}
+<div class="col">
+<article class="tile-style tile-{{ color }} sg-site-tile" aria-labelledby="site-{{ unit.shortName | lower }}">
+<h3 id="site-{{ unit.shortName | lower }}">{{ unit.shortName }}</h3>
+{% if unit.repoUrl %}
+<span><a href="{{ unit.repoUrl | escape }}" aria-label="{{ unit.shortName }} GitHub repo">GitHub repo</a></span>
+{% else %}
+<span class="invisible" aria-hidden="true">GitHub repo</span>
+{% endif %}
+{% if unit.siteUrl %}
+<a href="{{ unit.siteUrl | escape }}" aria-label="{{ unit.shortName }} GitHub site">GitHub site</a>
+{% else %}
+<span class="invisible" aria-hidden="true">GitHub site</span>
+{% endif %}
+</article>
+</div>
+{% endfor %}
+</div>
+{% endmacro %}
+
+<section class="mb-5" aria-labelledby="academic-heading">
+<h2 id="academic-heading">Academic</h2>
+{{ siteGrid(common.GitHub.academic, 'teal') }}
+</section>
+<section class="mb-5" aria-labelledby="administrative-heading">
+<h2 id="administrative-heading">Administrative</h2>
+{{ siteGrid(common.GitHub.administrative, 'blue') }}
+</section>
