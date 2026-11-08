@@ -26,11 +26,16 @@ records.site = {
 ...records.site_settings,
 search: records.search,
 searchProvider: records.search?.provider,
-ga4MeasurementId: records.analytics?.ga4MeasurementId,
+ga4MeasurementId: records.analytics?.ga4MeasurementId || common.analytics?.ga4MeasurementId || "",
+googleTagId: records.analytics?.googleTagId || records.analytics?.ga4MeasurementId || common.analytics?.googleTagId || common.analytics?.ga4MeasurementId || "",
+analyticsHostnames: records.analytics?.allowedHostnames || common.analytics?.allowedHostnames || [],
+searchConsoleVerificationToken: records.search_console?.verificationToken || "",
 defaultHero: records.heroes?.defaultHero,
 courseResources: [common.links.classAvailability, records.catalog_courses?.catalog, records.catalog_courses?.courseDescriptions].filter(Boolean)
 };
-if (records.analytics?.ga4MeasurementId && !/^G-[A-Z0-9]+$/.test(records.analytics.ga4MeasurementId)) throw new Error('Invalid GA4 measurement ID.');
+for (const id of [common.analytics?.ga4MeasurementId, records.analytics?.ga4MeasurementId]) {
+if (id && !/^G-[A-Z0-9]+$/.test(id)) throw new Error('Invalid GA4 measurement ID. Expected G- followed by uppercase letters or digits.');
+}
 return records;
 }
 export function loadCommon() {
