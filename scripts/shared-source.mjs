@@ -31,7 +31,6 @@ googleTagId: records.analytics?.googleTagId || records.analytics?.ga4Measurement
 analyticsHostnames: records.analytics?.allowedHostnames || common.analytics?.allowedHostnames || [],
 searchConsoleVerificationToken: records.search_console?.verificationToken || "",
 defaultHero: records.heroes?.defaultHero,
-courseResources: [common.links.classAvailability, records.catalog_courses?.catalog, records.catalog_courses?.courseDescriptions].filter(Boolean)
 };
 for (const id of [common.analytics?.ga4MeasurementId, records.analytics?.ga4MeasurementId]) {
 if (id && !/^G-[A-Z0-9]+$/.test(id)) throw new Error('Invalid GA4 measurement ID. Expected G- followed by uppercase letters or digits.');
@@ -74,8 +73,12 @@ if (fs.existsSync(path.join(project, 'src', name))) throw new Error(`Shared/loca
 }
 for (const name of files.filter(name => name.startsWith('includes/'))) {
 const local = path.join(project, 'src', name);
-const baseForwarder = name === 'includes/base.njk' && fs.existsSync(local) && fs.readFileSync(local, 'utf8').trim() === '{% include "shared/base.njk" %}';
-if (fs.existsSync(local) && !baseForwarder) throw new Error(`Shared/local template collision: ${name}`);
+const forwarders = {
+'includes/base.njk': '---\nlayout: shell.njk\n---\n{% include "shared/legacy-content.njk" %}',
+'includes/shell.njk': '{% include "shared/shell.njk" %}'
+};
+const isForwarder = forwarders[name] && fs.existsSync(local) && fs.readFileSync(local, 'utf8').trim() === forwarders[name];
+if (fs.existsSync(local) && !isForwarder) throw new Error(`Shared/local template collision: ${name}`);
 }
 const hash = crypto.createHash('sha256');
 for (const name of files) { hash.update(name); hash.update('\0'); hash.update(fs.readFileSync(path.join(sharedDir, name))); hash.update('\0'); }

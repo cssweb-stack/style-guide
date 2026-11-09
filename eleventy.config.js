@@ -24,7 +24,7 @@ configurePrivacy(config);
 // The local base layout delegates to the authoritative shared document shell.
 class GuideLoader extends nunjucks.FileSystemLoader {
 getSource(name) {
-if (name === 'shared/base.njk') name = path.join(sharedIncludes, 'base.njk');
+if (name.startsWith('shared/')) name = path.join(sharedIncludes, name.slice('shared/'.length));
 return super.getSource(name);
 }
 }
